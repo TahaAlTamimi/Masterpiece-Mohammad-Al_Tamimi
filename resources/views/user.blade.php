@@ -1,7 +1,7 @@
+
+
 @extends('layouts.app')
-
 @section('user')
-
 <div class="container">
     
     
@@ -57,6 +57,7 @@
 </div>
 </div>
 @endforeach
+@endsection
 
 <!-- @foreach($user->questions as $detail)
 {{$detail}}
@@ -72,5 +73,3 @@
 
 
 
-
-@endsection
