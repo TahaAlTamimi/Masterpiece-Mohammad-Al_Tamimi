@@ -132,6 +132,13 @@ class QuestionController extends Controller
         //
     }
 
+    public function destroy2($id)
+    {
+        // return 'done'.$id;
+        Question::findOrFail($id)->delete();
+        return back();
+    }
+
     public function try()
     {
        

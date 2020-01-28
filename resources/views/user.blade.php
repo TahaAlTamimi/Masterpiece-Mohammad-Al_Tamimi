@@ -38,7 +38,15 @@
     <hr><hr>
    
 </div>
-
+@if(count($user->questions)===0)
+<div class="container">
+<div class="card mb-3">
+<div class="card-body">
+<h5 class="card-title">There is no question. can you add question <a href='/question'><h2>click here</h2></a></h5>
+</div>
+</div>
+</div>
+@endif
 
 @foreach($user->questions as $detail)
 <div class="container">
@@ -53,8 +61,14 @@
   
     @endif
     <p class="card-text"><small class="text-muted">{{$detail->created_at}}</small></p>
+    <form method="POST" action="/deleteuser/{{$detail->id}}">
+    {{ csrf_field() }}
+   {{ method_field('DELETE') }}
+    <button class="btn btn-danger">Delete</button>
+</form>
   </div>
 </div>
+
 </div>
 @endforeach
 @endsection

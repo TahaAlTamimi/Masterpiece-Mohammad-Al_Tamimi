@@ -36,8 +36,8 @@ Route::get('/getcomments/{id}', 'HomeController@index')->name('home');
 Route::get('/calculate', 'HomeController@index')->name('home');
 Route::get('/deletecomments/{id}', 'HomeController@index')->name('home');
 Route::get('comments/{id}/edit', 'HomeController@index')->name('home');
-Route::get('/blogAdmin', 'HomeController@index')->name('home');
-Route::get('/EditAdmin/{id}', 'HomeController@index')->name('home');
+Route::get('/blogAdmin', 'HomeController@index')->middleware('admin')->name('home');
+Route::get('/EditAdmin/{id}', 'HomeController@index')->middleware('admin')->name('home');
 Route::get('/getposts/{id}', 'HomeController@index')->name('home');
 Route::get('/{id}/edit', 'HomeController@index')->name('home');
 
@@ -45,8 +45,8 @@ Route::get('/{id}/edit', 'HomeController@index')->name('home');
 
 
 
-Route::get('/recipeAdmin', 'HomeController@index')->name('home');
-Route::get('/EditRecipe/{id}', 'HomeController@index')->name('home');
+Route::get('/recipeAdmin', 'HomeController@index')->middleware('admin')->name('home');
+Route::get('/EditRecipe/{id}', 'HomeController@index')->middleware('admin')->name('home');
 // laravel route
 Route::post('/postadmin', 'PostController@store');
 Route::get('/getposts', 'PostController@index');
@@ -64,7 +64,7 @@ Route::put('/editpost/{id}', 'PostController@update');
 
 
 // recipe react
-Route::get('/Adminrecipe', 'HomeController@index')->name('home');
+Route::get('/Adminrecipe', 'HomeController@index')->middleware('admin')->name('home');
 Route::get('/recipe', 'HomeController@index')->name('home');
 Route::get('/recipe/{id}', 'HomeController@index')->name('home');
 Route::get('/getrecipecomments/{id}', 'HomeController@index')->name('home');
@@ -93,11 +93,11 @@ Route::get('/getquestion', 'HomeController@index')->name('home');
 Route::post('/userquestion', 'QuestionController@store');
 Route::get('/getquestion', 'QuestionController@index');
 Route::delete('/deletequestions/{id}', 'QuestionController@destroy');
-
+Route::delete('/deleteuser/{id}', 'QuestionController@destroy2');
 
 
 // answer react
-Route::get('/AllQuestionExpert', 'HomeController@index')->name('home');
+Route::get('/AllQuestionExpert', 'HomeController@index')->middleware('admin')->name('home');
 Route::get('/question/{id}', 'HomeController@index')->name('home');
 Route::get('/answer/{id}', 'HomeController@index')->name('home');
 // answer laravel 
