@@ -138,8 +138,10 @@ $=jQuery;
                                         <img src= "{{asset(Auth::user()->image_profile)}}" style="height:35px;width:35px; border-radius:50%;margin-right:15px; " >
      </a>
     <ul class="dropdown">
-        <li><a href="/user/{{Auth::user()->id}}">My Profile</a></li>
-        <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+  
+        <span>
+        <a  style="color: black;" href="/user/{{Auth::user()->id}}">My Profile</a></span>
+        <a style="color: black;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                        {{ __('Logout') }}
 
@@ -147,8 +149,8 @@ $=jQuery;
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-        </li>
-
+       
+                                 
     </ul>
 </li>
 

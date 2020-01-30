@@ -6,18 +6,7 @@ import SearchBar from './SearchBar';
 import Video from './Video';
 
 export class Youtube2 extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         videos: ""
-
-    //     };
-    //     // this.handleChange = this.handleChange.bind(this);
-    //     // this.onSubmit = this.onSubmit.bind(this)
-     
     
-    // }
-    // }
     state = {
 
         videos: ""
@@ -25,7 +14,7 @@ export class Youtube2 extends Component {
     }
 
     find = (title) => {
-        // console.log(title.length)
+ 
 
         if (title.length > 0) {
 
@@ -56,7 +45,6 @@ export class Youtube2 extends Component {
 
             <div className="container">
             
-                {/* <NavBar/> */}
 
                 <SearchBar find={this.find} />
 

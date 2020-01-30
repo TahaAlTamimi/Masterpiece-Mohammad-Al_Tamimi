@@ -37,6 +37,7 @@ export default class RecipeForm extends Component {
             .then(error => {
                 console.log(error)
             })
+            window.location.href='/recipe'
 
     }
     handlePhoto = e => {

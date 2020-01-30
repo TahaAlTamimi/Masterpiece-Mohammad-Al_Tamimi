@@ -75245,7 +75245,8 @@ function (_Component) {
         });
       }).then(function (error) {
         console.log(error);
-      }); // this.fileUpload(this.state.image);
+      });
+      window.location.href = '/blog'; // this.fileUpload(this.state.image);
     }
   }, {
     key: "render",
@@ -75443,6 +75444,7 @@ function (_Component) {
       }).then(function (error) {
         console.log(error);
       });
+      window.location.href = '/recipe';
     }
   }, {
     key: "createImage",
@@ -75632,10 +75634,18 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "all questions"), this.state.questions.map(function (question, i) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card mb-3"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
           to: "question/" + question.id,
           key: question.id
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, question.question, " ", question.id), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "card-text"
+        }, "Question no.", question.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card-body"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+          className: "card-title"
+        }, question.question))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)));
       }));
     }
   }]);
@@ -75745,18 +75755,7 @@ function (_Component) {
         });
       }).then(function (error) {
         console.log(error);
-      }); // .then(response => {
-      //     // console.log('from handle submit:', response);
-      //     // set state
-      //     // this.setState({
-      //     //     tasks: [response.data, ...this.state.tasks]
-      //     // });
-      //     // then clear the value of textarea
-      //     this.setState({
-      //         comment: '',
-      //         comments: [...this.state.comments, response.data]
-      //     });
-      // });
+      });
     }
   }, {
     key: "delete",
@@ -75795,20 +75794,7 @@ function (_Component) {
       }).then(function (errors) {
         console.log(errors);
       });
-    } // componentWillMount() {
-    //     axios.get("/getcomments/"+this.props.match.params.id)
-    //         .then(res => {
-    //             console.log('resssss22222',res.data)
-    //             console.log('resssss33333',res.data)
-    //             this.setState({
-    //                 comments: res.data.comments
-    //             });
-    //         })
-    //         .then(errors => {
-    //             console.log(errors)
-    //         })
-    // }
-
+    }
   }, {
     key: "render",
     value: function render() {
@@ -75821,7 +75807,7 @@ function (_Component) {
       }
       console.disableYellowBox = true; // if (this.state.comments.length == 0) return <h1>loading..</h1>
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "question item alone"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].question), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].question), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
@@ -75841,7 +75827,8 @@ function (_Component) {
       }, "Puplish")), this.state.answers.length == 0 ? 'no answer' : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.answers.map(function (ans) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           key: ans.id
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, ans.answer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, ans.answer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "btn btn-danger",
           onClick: function onClick() {
             return _this4["delete"](ans.id);
           }
@@ -76175,7 +76162,7 @@ function (_Component) {
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Question form"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " Add Your Question & Get Answer From Expert "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
@@ -76204,6 +76191,11 @@ function (_Component) {
         }, q.answer.answer) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "card-text"
         }, "no answers"))), _this4.state.roles.id == q.user.id ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "btn btn-danger",
+          onClick: function onClick() {
+            return _this4["delete"](q.id);
+          }
+        }, "Delete ") : '', _this4.state.roles.id == 1 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "btn btn-danger",
           onClick: function onClick() {
             return _this4["delete"](q.id);
@@ -76719,12 +76711,6 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "img-fluid"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "breadcumb-area bg-img bg-overlay",
-        style: {
-          backgroundImage: 'url(img/bg-img/rec.jpg)',
-          maxWidth: '100%'
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bradcumbContent"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
@@ -76732,16 +76718,7 @@ function (_Component) {
         className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Recipe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-        "aria-label": "breadcrumb"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
-        className: "breadcrumb"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "breadcrumb-item"
-      }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "breadcrumb-item active",
-        "aria-current": "page"
-      }, "Blog"))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-form d-inline-block"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"
@@ -79536,7 +79513,6 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "find", function (title) {
-      // console.log(title.length)
       if (title.length > 0) {
         axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=".concat(title, "sport\n            &type=video&key=AIzaSyBdVut9QCzqAHBzfDEh30yUp4E529som6s\n        ")).then(function (res) {
           _this.setState({

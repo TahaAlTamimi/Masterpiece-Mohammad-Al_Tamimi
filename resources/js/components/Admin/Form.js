@@ -81,6 +81,9 @@ export default class Form extends Component {
             .then(error => {
                 console.log(error)
             })
+          
+                window.location.href='/blog'
+        
         // this.fileUpload(this.state.image);
 
     }

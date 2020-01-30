@@ -107,7 +107,7 @@ export default class QuestionForm extends Component {
             <>
             <div className="container">
 
-                <h1>Question form</h1>
+                <h1> Add Your Question & Get Answer From Expert </h1>
                 <form onSubmit={this.onSubmit} >
 
                     <div className="form-group">
@@ -124,23 +124,14 @@ export default class QuestionForm extends Component {
                 <hr />
 
 
-                {/* {this.state.questions.length == 0 ? "there is no question" : this.state.questions.map((question) => <div key={question.id}> <h1 >{question.name}</h1><h2>{question.question}</h2>
-
-
-                    <div>  <h3>answer:{this.state.answer.length == 0 ? 'no answer' : this.state.answer[x].question_id == question.id ? this.state.answer[x].answer : 'no answer'
-
-                    }</h3>   {x = x + 1}</div>
-
-
-
-                    <button onClick={() => this.delete(question.id)}>Delete</button></div>)} */}
+             
 
                 <div>
                     {this.state.answer.map(q =>
 
                         <div key={q.id} className="card mb-3">
 
-                            {/* <h3>User:{q.user.name}</h3> */}
+                           
                             <div >
                                
                                     <div className="card-body">
@@ -167,15 +158,15 @@ export default class QuestionForm extends Component {
                                  
                                       
                                 }</div>
-                                {/* <h3>{q.user.name}</h3> */}
+                            
 
                                 
 
                             </div>
-                        {/* {this.state.roles.id===undefined?'ok':'no'} */}
                             {this.state.roles.id==q.user.id?<button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button>:''}
+                            {this.state.roles.id==1?<button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button>:''}
                             
-                            {/* {this.state.roles.isAdmin = 1?<button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete</button>:''} */}
+                            
                            
                           
                             </div>
@@ -190,9 +181,7 @@ export default class QuestionForm extends Component {
 
 
 
-                {/* <div>
-                    {this.state.answer.map(q => <div key={q.id}><h1>{q.question} </h1><div> {q.answer ? q.answer.answer : "noanswers"}  <h3>{q.user.name}</h3><br /></div><button onClick={() => this.delete(q.id)}>Delete</button></div>)}
-                </div> */}
+               
 
             </div>
             </>

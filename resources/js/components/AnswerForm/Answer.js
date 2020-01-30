@@ -44,18 +44,7 @@ export default class Answer extends Component {
             .then(error => {
                 console.log(error)
             })
-        // .then(response => {
-        //     // console.log('from handle submit:', response);
-        //     // set state
-        //     // this.setState({
-        //     //     tasks: [response.data, ...this.state.tasks]
-        //     // });
-        //     // then clear the value of textarea
-        //     this.setState({
-        //         comment: '',
-        //         comments: [...this.state.comments, response.data]
-        //     });
-        // });
+   
     }
 
     delete(id) {
@@ -103,25 +92,6 @@ export default class Answer extends Component {
 
 
 
-    // componentWillMount() {
-    //     axios.get("/getcomments/"+this.props.match.params.id)
-
-    //         .then(res => {
-    //             console.log('resssss22222',res.data)
-    //             console.log('resssss33333',res.data)
-    //             this.setState({
-    //                 comments: res.data.comments
-    //             });
-
-    //         })
-    //         .then(errors => {
-    //             console.log(errors)
-    //         })
-
-
-
-    // }
-
 
 
 
@@ -135,7 +105,7 @@ export default class Answer extends Component {
         return (
             <>
 
-                <h1>question item alone</h1>
+                
                 <div>
                     <h1>{this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].question}</h1>
                     <h3>{this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].name}</h3>
@@ -158,7 +128,8 @@ export default class Answer extends Component {
 
         {this.state.answers.length==0?'no answer':<div>{this.state.answers.map(ans=><div key={ans.id}>
         <h1>{ans.answer}</h1>
-        <button onClick={() => this.delete(ans.id)}>Delete</button>
+        <hr/>
+        <button className='btn btn-danger'onClick={() => this.delete(ans.id)}>Delete</button>
 
         </div>)}</div>}
 

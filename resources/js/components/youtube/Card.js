@@ -4,13 +4,7 @@ import VideoShow from './VideoShow';
 
 
 export class Card extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-          
-    //         videos: ""
 
-    //     };}
     
 
     state = {
