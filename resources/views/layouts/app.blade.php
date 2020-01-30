@@ -88,6 +88,15 @@ $=jQuery;
                                     @auth
                                     <li><a href="/question">add your question</a></li>
                                     @endauth
+
+                                    @if(!Auth::guest() && Auth::user()->hasAnyRole(['Expert']))
+                                    <li> <a  href="{{ url('/AllQuestionExpert') }}"
+                                     >
+                                        {{ __('Answer') }}
+                                    </a></li>
+
+
+                 @endif
                                     @if(!Auth::guest() && Auth::user()->hasAnyRole(['Admin']))
 
 <li><a href="#">Admin</a>
@@ -98,18 +107,12 @@ $=jQuery;
         <li><a href="/blogAdmin">Edit Article</a></li>
         <li><a href="/recipeAdmin">Edit Article</a></li>
 
+
     </ul>
 </li>
 @endif
 
-@if(!Auth::guest() && Auth::user()->hasAnyRole(['Expert']))
-                 <a class="dropdown-item"href="{{ url('/AllQuestionExpert') }}"
-                                     >
-                                        {{ __('Answer') }}
-                                    </a>
 
-
-                 @endif
 
                                     @guest
                             <li>

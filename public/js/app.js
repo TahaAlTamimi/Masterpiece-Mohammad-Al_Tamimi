@@ -78216,55 +78216,25 @@ function (_Component) {
           padding: "20px",
           backgroundColor: "green"
         }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container",
-        style: {
-          margin: "20px"
-        }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row",
-        style: {
-          margin: "5px"
-        }
+        className: "col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-6"
+        className: "card"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card ",
-        style: {
-          padding: "3px"
-        }
+        className: "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "\"Sporting, fitness and healthy living are essential as they are part of modern personality development.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-sm-6"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-header "
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body col"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("blockquote", {
-        className: "blockquote mb-0"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        style: {
-          fontFamily: ' Amaranth',
-          fontSize: "18px"
-        }
-      }, "\"Sporting, fitness and healthy living are essential as they are part of modern personality development."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-        className: "blockquote-footer"
-      }, "Christian Kunert"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-6"
+        className: "card"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card ",
-        style: {
-          padding: "3px"
-        }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-header "
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "card-body col"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("blockquote", {
-        className: "blockquote mb-0"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-        style: {
-          fontFamily: ' Amaranth',
-          fontSize: "18px"
-        }
-      }, "MY RECOMMENDATION: \"During their holidays your guests have time to care for their body, soul and mind."))))))));
+        className: "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "card-title"
+      }, "MY RECOMMENDATION:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "\"During their holidays your guests have time to care for their body, soul and mind.\"")))))));
     }
   }]);
 
