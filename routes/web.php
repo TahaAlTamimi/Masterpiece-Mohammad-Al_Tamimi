@@ -107,6 +107,7 @@ Route::get('/getanswers/{id}', 'AnswerController@show');
 Route::delete('/deleteanswers/{id}', 'AnswerController@destroy');
 // youtube
 Route::get('/youtube', 'HomeController@index')->name('home');
+Route::get('/about', 'HomeController@index')->name('home');
 
 // Route::get('/obese', 'HomeController@index')->name('home');
 Route::get('/try', 'QuestionController@try');

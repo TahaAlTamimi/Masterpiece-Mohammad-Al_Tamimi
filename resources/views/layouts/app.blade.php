@@ -12,7 +12,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'H&S') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -84,6 +84,7 @@ $=jQuery;
                                     <li><a href="/youtube">Exercise</a></li>
                                     <li><a href="/recipe">Recipe</a>
                                     <li><a href="/calculate">Advice</a></li>
+                                    <li><a href="/about">About Us</a></li>
 
                                     @auth
                                     <li><a href="/question">add your question</a></li>

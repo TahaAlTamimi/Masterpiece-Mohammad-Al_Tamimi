@@ -19,6 +19,7 @@ import BlogRender from './blog/RenderBlog';
 import EditAdminBlog from './blog/EditAdminBlog';
 import RecipeRender from './Recipe/RenderRecipe';
 import EditRecipe from './Recipe/EditRecipe';
+import About from './Admin/About';
 export default class App extends Component {
     render() {
         return (
@@ -44,6 +45,7 @@ export default class App extends Component {
                     <Route path='/recipeAdmin' component={RecipeRender} exact />
 
                     <Route path='/EditRecipe/:id' exact render={props => <EditRecipe{...props} />} />
+                    <Route path='/about' component={About} exact />
                     </BrowserRouter>
                
 

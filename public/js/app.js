@@ -75100,6 +75100,157 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/components/Admin/About.js":
+/*!************************************************!*\
+  !*** ./resources/js/components/Admin/About.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return About; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var About =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(About, _Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(About).apply(this, arguments));
+  }
+
+  _createClass(About, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about-us--area section-padding-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-lg-7"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section-heading"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "H&S"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Why choose H&S?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "H&S delivers relevant information in clear, jargon-free language that puts health into context in peoples' lives. Through medical content, insights from experts and real people, and breaking news, we answer: how it happened, what it feels like, what you can do about it, and why it matters. Health.com is produced by editors and journalists dedicated to delivering accurate, trusted, up-to-date health and medical information, for consumers. We focus on problem-solving content to help you make decisions during complicated, stressful times. We write in plain English, using real-life examples. For additional information we partner with the medically accredited sources listed below."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-lg-5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about--thumb"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "img/bg-img/bg-12.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-lg-7"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section-heading"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, " Accuracy and Review of Content")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "about-text"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Accuracy and Review of Content by doctors, experts, patients, and advocates have been interviewed during the production of our original content. Read our User's Bill of Rights and Editorial Policy to learn more about our commitment to editorial integrity and service to our users. About Your Privacy We know that health is a very personal, private subject, and we maintain a strict privacy policy.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "teachers-area section-padding-100-0"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "section-heading"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "H&S Team"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Meet the instructors")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-teachers-area mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-bg-gradients"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/storage/taha.jpeg",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Mohammad Al-Tamimi"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Content SuperVisor")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-teachers-area mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-bg-gradients"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "img/team-img/t2.png",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Mick Hamilton"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Doctor")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-teachers-area mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-bg-gradients"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "img/team-img/t3.png",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Criss James"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Fitness trainer")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-sm-6 col-lg-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-teachers-area mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-bg-gradients"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "img/team-img/t4.png",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "teachers-info"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", null, "Jack Black"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Expert Health"))))))));
+    }
+  }]);
+
+  return About;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Admin/Form.js":
 /*!***********************************************!*\
   !*** ./resources/js/components/Admin/Form.js ***!
@@ -75827,6 +75978,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blog_EditAdminBlog__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./blog/EditAdminBlog */ "./resources/js/components/blog/EditAdminBlog.js");
 /* harmony import */ var _Recipe_RenderRecipe__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Recipe/RenderRecipe */ "./resources/js/components/Recipe/RenderRecipe.js");
 /* harmony import */ var _Recipe_EditRecipe__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./Recipe/EditRecipe */ "./resources/js/components/Recipe/EditRecipe.js");
+/* harmony import */ var _Admin_About__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./Admin/About */ "./resources/js/components/Admin/About.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -75844,6 +75996,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -75959,6 +76112,10 @@ function (_Component) {
         render: function render(props) {
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Recipe_EditRecipe__WEBPACK_IMPORTED_MODULE_20__["default"], props);
         }
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
+        path: "/about",
+        component: _Admin_About__WEBPACK_IMPORTED_MODULE_21__["default"],
+        exact: true
       })));
     }
   }]);
