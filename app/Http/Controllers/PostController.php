@@ -83,25 +83,17 @@ class PostController extends Controller
 		   $image = $request->get('image');
 		   $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
 		   \Image::make($request->get('image'))->save(public_path('storage/').$name);
-		   $post->title=$request->input('title');
-		 $post->image=$name;
-		$post->prefer=$request->input('prefer');
-		$post->author=$request->input('author');
-		$post->body=$request->input('body');
-		
-		$post->save();
-		 }else{
-			$post->title=$request->input('title');
+		 
+		   $post->image=$name;
 	
-		   $post->prefer=$request->input('prefer');
-		   $post->author=$request->input('author');
-		   $post->body=$request->input('body');
-		   $post->save();
 		 }
-		
-		
-		
-		
+			$post->title=$request->input('title');
+			$post->prefer=$request->input('prefer');
+			$post->author=$request->input('author');
+			$post->body=$request->input('body');
+			$post->save();
+		 
+		 
 		
 		return($post);
 
@@ -149,7 +141,7 @@ class PostController extends Controller
 
 	public function commentsdestroy( $id) {
 		
-		 $ok=Comment::where('id' , '=' , $id);
+		
 
 		Comment::where('id' , '=' , $id)
 		// ->

@@ -76,22 +76,22 @@ export default class Recipe extends Component {
                     {/* <div className="breadcumb-area bg-img bg-overlay" style={{ backgroundImage: 'url(img/bg-img/rec.jpg)', maxWidth: '100%' }}> */}
 
 
-                        <div className="bradcumbContent">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-12">
-                                        {/* <h2>Recipe</h2> */}
-                                        {/* <nav aria-label="breadcrumb"> */}
-                                            {/* <ol className="breadcrumb">
+                    <div className="bradcumbContent">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12">
+                                    {/* <h2>Recipe</h2> */}
+                                    {/* <nav aria-label="breadcrumb"> */}
+                                    {/* <ol className="breadcrumb">
                                                 <li className="breadcrumb-item">Home</li>
                                                 <li className="breadcrumb-item active" aria-current="page">Blog</li>
                                             </ol> */}
-                                        {/* </nav> */}
-                                    </div>
+                                    {/* </nav> */}
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 {/* </div> */}
 
 
@@ -166,47 +166,27 @@ export default class Recipe extends Component {
                                     </div>
 
                                     <div className="latest-blog-posts mb-100">
-                                        <h5>Latest Posts</h5>
+
+
+
                                         <div className="single-latest-blog-post">
                                             <div className="post-thumbnail">
-                                                <img src={"img/blog-img/6.png"} alt="" />
+                                                <img src={"/img/blog-img/6.png"} alt="" />
                                             </div>
                                             <div className="post-content">
 
-                                                <a href="#" className="post-title">10 Healthy foods for a good living</a>
+                                                <a href="#" className="post-title">Try our Gym</a>
 
                                                 <div className="post-meta">
-                                                    <p>By <a href="#">Admin</a> | in <a href="#">Health</a> | <a href="#">3 comments</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="single-latest-blog-post">
-                                            <div className="post-thumbnail">
-                                                <img src={"img/blog-img/6.png"} alt="" />
-                                            </div>
-                                            <div className="post-content">
-
-                                                <a href="#" className="post-title">10 Healthy foods for a good living</a>
-
-                                                <div className="post-meta">
-                                                    <p>By <a href="#">Admin</a> | in <a href="#">Health</a> | <a href="#">3 comments</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="single-latest-blog-post">
-                                            <div className="post-thumbnail">
-                                                <img src={"img/blog-img/6.png"} alt="" />
-                                            </div>
-                                            <div className="post-content">
-
-                                                <a href="#" className="post-title">10 Healthy foods for a good living</a>
-
-                                                <div className="post-meta">
-                                                    <p>By <a href="#">Admin</a> | in <a href="#">Health</a> | <a href="#">3 comments</a></p>
+                                                    <p>Our <a href="#">Tranieer</a> | in <a href="#">Health</a> | <a href="#">& Strong</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+
+
+
                                     <div className="add-widget mb-100">
                                         <a href="#"><img src={"img/bg-img/add4.png"} alt="" /></a>
                                     </div>

@@ -31,7 +31,7 @@ export default class EidtAdminForm extends Component {
         console.log([e.target.name], e.target.value);
     }
     handlePhoto = e => {
-        // console.log("PHOTO", e.target.value);
+        
         let files = e.target.files || e.dataTransfer.files;
         console.log("file", files);
         if (!files.length) return;
@@ -54,16 +54,7 @@ export default class EidtAdminForm extends Component {
 
         const { title, prefer, author, body, image } = this.state
         axios.put('/editpost/' + this.props.match.params.id, { title, prefer, author, body, image })
-            .then(res => {
-                console.log('from handle submit', res);
-                // this.setState({
-                //     title: '',
-                //     prefer: '',
-                //     author: '',
-                //     body: '',
-                //     image: ''
-                // });
-            })
+          
 
             .then(error => {
                 console.log(error)
@@ -84,7 +75,7 @@ export default class EidtAdminForm extends Component {
         axios.get("/getposts/" + this.props.match.params.id)
 
             .then(res => {
-                console.log('resssss edit', res.data)
+                
                 this.setState({
                     id: res.data.id,
                     title: res.data.title,
@@ -111,11 +102,10 @@ export default class EidtAdminForm extends Component {
 
 
     render() {
-        console.log('image', this.state.image);
-        console.log('params', this.props.match.params.id);
+       
         return (
             <>
-                <h1>edittttttttttttttttt</h1>
+                <h1>Article Edit</h1>
 
 
                 <form onSubmit={this.onSubmit} encType='multipart/form-data'>
@@ -135,7 +125,7 @@ export default class EidtAdminForm extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="image">image</label>
-                        <input className="form-control" name='image' type='file' onChange={this.handlePhoto} id="image" />
+                        <input className="form-control" name='image' type='file' onChange={this.handlePhoto}  id="image" />
                     </div>
 
 

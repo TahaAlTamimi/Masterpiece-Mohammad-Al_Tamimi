@@ -40,7 +40,7 @@ export default class RenderBlog extends Component {
     }
 
     delete(id) {
-        console.log('deletform',id)
+        console.log('deletform', id)
         const isNotId = blog => blog.id !== id;
 
         const updatedblogs = this.state.blogs.filter(isNotId);
@@ -88,7 +88,7 @@ export default class RenderBlog extends Component {
 
     render() {
         console.log(this.state.blogs)
-        // console.log('search:', this.state.search)
+
         let filterBlogs = this.state.blogs.filter(
             (blog) => {
                 return blog.title.toLowerCase().indexOf(this.state.search) !== -1
@@ -97,30 +97,21 @@ export default class RenderBlog extends Component {
         )
 
 
-        // console.log('filter', filterBlogs.length)
-        // console.log('pageRangeDisplayed', this.state.pageRangeDisplayed)
+
         return (
             <>
-            <h1>Admin</h1>
-            <div className="search-form d-inline-block">
-                <div className="d-flex">
-                <input type='text' placeholder='Search...' value={this.state.search} onChange={this.updateSearch}  className="form-control" />
+                <h1>Admin Board </h1>
+                <div className="search-form d-inline-block">
+                    <div className="d-flex">
+                        <input type='text' placeholder='Search...' value={this.state.search} onChange={this.updateSearch} className="form-control" />
+                    </div>
+
                 </div>
-          
-            </div>
-            
-           
+
+
                 <hr />
-                
-                {/* <div className="container">
-                    {filterBlogs.map((blog, i) => {
-                        return <li key={i}>
 
-                            <img width={500} height={300} mode='fit' src={"/storage/" + blog.image} />
-                            <Link to={"post/" + blog.id}>{blog.title} {blog.id}</Link></li>
-                    })}
 
-                </div> */}
 
 
 
@@ -129,7 +120,7 @@ export default class RenderBlog extends Component {
 
 
                 <div className="site-section">
-              
+
 
 
 
@@ -137,8 +128,7 @@ export default class RenderBlog extends Component {
                         {filterBlogs.map((blog, i) => {
                             return <div className="row" key={blog.id} >
 
-                                {/* <img width={500} height={300} mode='fit' src={"/storage/" + blog.image} /> */}
-                                {/* <Link to={"post/" + blog.id}>{blog.title} {blog.id}</Link> */}
+
 
 
                                 <div className="col-lg-9">
@@ -157,7 +147,7 @@ export default class RenderBlog extends Component {
                                                 <span className="date-read">Date: {blog.created_at} </span>
                                             </div>
                                             <button className="btn btn-danger" onClick={() => this.delete(blog.id)}>Delete</button>
-                                            <Link to={'/EditAdmin/'+ blog.id} className="btn btn-info">Edit</Link>
+                                            <Link to={'/EditAdmin/' + blog.id} className="btn btn-info">Edit</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -167,27 +157,29 @@ export default class RenderBlog extends Component {
                 </div>
 
 
-                <div className="row pagination  ">
-                    <div className="col-lg-6 ">
-                        <Pagination
+               
 
-                            activePage={this.state.activePage}
-                            itemsCountPerPage={this.state.itemsCountPerPage}
-                            totalItemsCount={this.state.totalItemsCount}
-                            pageRangeDisplayed={this.state.pageRangeDisplayed}
-                            onChange={this.handlePageChange}
-                            itemClass=' green'
-                            linkClass='text-white page-link green'
+                    <div className="row pagination  ">
+                        <div className="col-lg-6 ">
+                            <Pagination
 
-                        />
+                                activePage={this.state.activePage}
+                                itemsCountPerPage={this.state.itemsCountPerPage}
+                                totalItemsCount={this.state.totalItemsCount}
+                                pageRangeDisplayed={this.state.pageRangeDisplayed}
+                                onChange={this.handlePageChange}
+                                itemClass=' green'
+                                linkClass='text-white page-link green'
+
+                            />
+                        </div>
                     </div>
-                </div>
 
 
             </>
 
 
 
-        );
-    }
-}
+                );
+            }
+        }

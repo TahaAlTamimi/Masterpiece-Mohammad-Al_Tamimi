@@ -22,8 +22,7 @@ export default class RenderRecipe extends Component {
 
 
     handlePageChange = (pageNumber) => {
-        console.log(`active page is ${pageNumber}`);
-        // this.setState({ activePage: pageNumber });
+       
         axios.get('/getrecipes?page=' + pageNumber)
 
             .then(res => {
@@ -87,8 +86,7 @@ export default class RenderRecipe extends Component {
 
 
     render() {
-        console.log(this.state.recipes)
-        // console.log('search:', this.state.search)
+     
         let filterrecipes = this.state.recipes.filter(
             (recipe) => {
                 return recipe.title.toLowerCase().indexOf(this.state.search) !== -1
@@ -97,8 +95,6 @@ export default class RenderRecipe extends Component {
         )
 
 
-        // console.log('filter', filterrecipes.length)
-        // console.log('pageRangeDisplayed', this.state.pageRangeDisplayed)
         return (
             <>
             <h1>Admin Recipe</h1>
@@ -112,15 +108,7 @@ export default class RenderRecipe extends Component {
            
                 <hr />
                 
-                {/* <div className="container">
-                    {filterrecipes.map((recipe, i) => {
-                        return <li key={i}>
-
-                            <img width={500} height={300} mode='fit' src={"/storage/" + recipe.image} />
-                            <Link to={"post/" + recipe.id}>{recipe.title} {recipe.id}</Link></li>
-                    })}
-
-                </div> */}
+          
 
 
 
@@ -137,8 +125,7 @@ export default class RenderRecipe extends Component {
                         {filterrecipes.map((recipe, i) => {
                             return <div className="row" key={recipe.id} >
 
-                                {/* <img width={500} height={300} mode='fit' src={"/storage/" + recipe.image} /> */}
-                                {/* <Link to={"post/" + recipe.id}>{recipe.title} {recipe.id}</Link> */}
+                 
 
 
                                 <div className="col-lg-9">
@@ -147,10 +134,10 @@ export default class RenderRecipe extends Component {
 
                                     </div>
                                     <div className="post-entry-2 d-flex">
-                                        {/* <img  className="thumbnail order-md-2" mode='fit' src={"/storage/" + recipe.image} /> */}
+                                        
                                         <div className="thumbnail order-md-2" style={{ backgroundImage: `url(${"/storage/" + recipe.image})` }}></div>
                                         <div className="contents order-md-1 pl-0">
-                                            <h2> <Link to={"post/" + recipe.id}>{recipe.title} </Link></h2>
+                                            <h2> <Link to={"recipe/" + recipe.id}>{recipe.title} </Link></h2>
                                             <p className="mb-3">{recipe.prefer}</p>
                                             <div className="post-meta">
                                                 <span className="d-block">Author: {recipe.author}</span>

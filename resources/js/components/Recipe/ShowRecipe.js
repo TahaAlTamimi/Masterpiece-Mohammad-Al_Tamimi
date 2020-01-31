@@ -127,42 +127,115 @@ export default class ShowRecipe extends Component {
                             <div className="col-lg-8 single-content">
 
                                 <p className="mb-5">
+                                    
                                     <img width="100%" display='block'
                                         height="400" src={"/storage/" + this.state.item.image} />
                                     {/* <img  className="thumbnail order-md-2" mode='fit' src={"/storage/" +this.state.item.image} /> */}
                                 </p>
+
+                                
                                 <h1 className="mb-4">
                                     {this.state.item.title}
                                 </h1>
+
+
+                                
                                 <div className="post-meta d-flex mb-5">
 
                                     <div className="vcard">
                                         <span className="d-block">Author : {this.state.item.author} </span>
                                         <span className="date-read">Date : {this.state.item.created_at}</span>
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
                                     </div>
+
+
+
+
+
+                                    
+                                </div>
+
+
+
+
+                                
+                            </div>
+
+
+                            <div className="col-12 col-md-4">
+                                <div className="fitness-blog-sidebar">
+
+
+                                    <div className="add-widget mb-100">
+                                        <a href="#"><img src={"/img/bg-img/add3.png"} alt="" /></a>
+                                    </div>
+
+                                    <div className="latest-blog-posts mb-100">
+                                       
+                                    
+                                     
+                                        <div className="single-latest-blog-post">
+                                            <div className="post-thumbnail">
+                                                <img src={"/img/blog-img/6.png"} alt="" />
+                                            </div>
+                                            <div className="post-content">
+
+                                                <a href="#" className="post-title">Try our Gym</a>
+
+                                                <div className="post-meta">
+                                                    <p>Our <a href="#">Tranieer</a> | in <a href="#">Health</a> | <a href="#">& Strong</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="add-widget mb-100">
+                                        <a href="#"><img src={"/img/bg-img/add4.png"} alt="" /></a>
+                                    </div>
+
+
                                 </div>
                             </div>
 
                         </div>
+
+
+
+
+
+
+                        
                     </div>
+
+
+                    
                 </div>
+
                 <h5>{this.state.item.body}</h5>
-                {/* <h1>{this.state.item.id}</h1>
-                <h1>recipe</h1>
-                <h1>{this.state.item.title}</h1>
-                <h1>{this.state.item.author}</h1>
-                <h1>{this.state.item.body}</h1>
-                <h1>{this.state.item.prefer}</h1>
-                <img width={500} height={300} mode='fit' src={"/storage/" + this.state.item.image} /> */}
+            
+
+
 
                 <hr />
                 <hr />
+                
                 <div className="pt-5">
                     <div className="section-title">
                         <h2 className="mb-5">Comments</h2>
                     </div>
                     {this.state.recipecomments.length == 0 ? "" : this.state.recipecomments.map(((recipecomment) =>
                         <CommentsRecipe delete={this.delete} roles={this.state.roles} recipecomment={recipecomment} key={recipecomment.id} handleChange={this.handleChange} editedcomments={this.editedcomments} />))}
+                
+                
+                
                 </div>
 
 
@@ -207,6 +280,8 @@ export default class ShowRecipe extends Component {
                                 Please log in to show comments and add your comments
                     </h1>
                         </div>}
+
+                        
 
             </>
 

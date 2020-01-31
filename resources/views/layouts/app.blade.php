@@ -105,7 +105,7 @@ $=jQuery;
         <li><a href="/post">Add Article</a></li>
         <li><a href="/Adminrecipe">Add Recipe</a></li>
         <li><a href="/blogAdmin">Edit Article</a></li>
-        <li><a href="/recipeAdmin">Edit Article</a></li>
+        <li><a href="/recipeAdmin">Edit Recipe</a></li>
 
 
     </ul>

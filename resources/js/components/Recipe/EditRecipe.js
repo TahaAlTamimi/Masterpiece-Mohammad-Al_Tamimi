@@ -54,16 +54,7 @@ export default class EidtRecipe extends Component {
 
         const { title, prefer, author, body, image } = this.state
         axios.put('/editrecipe/' + this.props.match.params.id, { title, prefer, author, body, image })
-            .then(res => {
-                console.log('from handle submit', res);
-                // this.setState({
-                //     title: '',
-                //     prefer: '',
-                //     author: '',
-                //     body: '',
-                //     image: ''
-                // });
-            })
+         
 
             .then(error => {
                 console.log(error)

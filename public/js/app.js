@@ -75152,7 +75152,6 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Form).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "handlePhoto", function (e) {
-      // console.log("PHOTO", e.target.value);
       var files = e.target.files || e.dataTransfer.files;
       console.log("file", files);
       if (!files.length) return;
@@ -75166,39 +75165,18 @@ function (_Component) {
       author: '',
       body: '',
       image: ''
-    }; // bind
-
+    };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
-    _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_this)); // this.fileUpload = this.fileUpload.bind(this)
-
+    _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // handle change
-
+  }
 
   _createClass(Form, [{
     key: "handleChange",
     value: function handleChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
-      console.log([e.target.name], e.target.value); // let files = e.target.files || e.dataTransfer.files;
-      // if (!files.length)
-      //       return;
-      // this.createImage(files[0]);
-    } // createImage(file) {
-    //     let reader = new FileReader();
-    //     reader.onload = (e) => {
-    //       this.setState({
-    //         image: e.target.result
-    //       })
-    //     };
-    //     reader.readAsDataURL(file);
-    //   }
-    //   fileUpload(image){
-    //     const url = '/postadmin';
-    //     const formData = {file: this.state.image}
-    //     return  post(url, formData)
-    //             .then(response => console.log(response))
-    //   }
-
+      console.log([e.target.name], e.target.value);
+    }
   }, {
     key: "createImage",
     value: function createImage(file) {
@@ -75246,35 +75224,21 @@ function (_Component) {
       }).then(function (error) {
         console.log(error);
       });
-      window.location.href = '/blog'; // this.fileUpload(this.state.image);
+      window.location.href = '/blog';
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/post"
-      }, "Bolg"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/youtube"
-      }, "youtube"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/calculate"
-      }, "calculate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/Adminrecipe"
-      }, "recipe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/recipe"
-      }, "recipe user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/question"
-      }, "question user"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/AllQuestionExpert"
-      }, "Expert"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onSubmit,
         encType: "multipart/form-data"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "title"
-      }, "title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "title",
         onChange: this.handleChange,
@@ -75286,7 +75250,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "prefer"
-      }, "prefer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Prefer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "prefer",
         onChange: this.handleChange,
@@ -75298,7 +75262,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "author"
-      }, "author"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Author"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "author",
         onChange: this.handleChange,
@@ -75310,7 +75274,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "image"
-      }, "image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "image",
         type: "file",
@@ -75321,7 +75285,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "body"
-      }, "Example textarea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, "Content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "form-control",
         name: "body",
         id: "body",
@@ -75395,7 +75359,6 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(RecipeForm).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "handlePhoto", function (e) {
-      // console.log("PHOTO", e.target.value);
       var files = e.target.files || e.dataTransfer.files;
       console.log("file", files);
       if (!files.length) return;
@@ -75409,13 +75372,11 @@ function (_Component) {
       author: '',
       body: '',
       image: ''
-    }; // bind
-
+    };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // handle change
-
+  }
 
   _createClass(RecipeForm, [{
     key: "handleChange",
@@ -75467,20 +75428,14 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/post"
-      }, "Bolg"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/youtube"
-      }, "youtube"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-        to: "/calculate"
-      }, "calculate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "add recipe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Add Recipe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onSubmit,
         encType: "multipart/form-data"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "title"
-      }, "title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "title",
         onChange: this.handleChange,
@@ -75492,7 +75447,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "prefer"
-      }, "prefer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Prefer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "prefer",
         onChange: this.handleChange,
@@ -75504,7 +75459,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "author"
-      }, "author"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Author"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "author",
         onChange: this.handleChange,
@@ -75516,7 +75471,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "image"
-      }, "image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "image",
         type: "file",
@@ -75527,7 +75482,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "body"
-      }, "Example textarea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, "Content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "form-control",
         name: "body",
         id: "body",
@@ -76450,14 +76405,6 @@ function (_Component) {
         author: author,
         body: body,
         image: image
-      }).then(function (res) {
-        console.log('from handle submit', res); // this.setState({
-        //     title: '',
-        //     prefer: '',
-        //     author: '',
-        //     body: '',
-        //     image: ''
-        // });
       }).then(function (error) {
         console.log(error);
       });
@@ -76777,67 +76724,27 @@ function (_Component) {
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "latest-blog-posts mb-100"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Latest Posts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "single-latest-blog-post"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-thumbnail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "img/blog-img/6.png",
+        src: "/img/blog-img/6.png",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
         className: "post-title"
-      }, "10 Healthy foods for a good living"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Try our Gym"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-meta"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Our ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "Admin"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Tranieer"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
       }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "3 comments"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "single-latest-blog-post"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-thumbnail"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "img/blog-img/6.png",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "post-title"
-      }, "10 Healthy foods for a good living"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-meta"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Admin"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "3 comments"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "single-latest-blog-post"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-thumbnail"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "img/blog-img/6.png",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "post-title"
-      }, "10 Healthy foods for a good living"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-meta"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Admin"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "3 comments")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "& Strong")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "add-widget mb-100"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
@@ -76930,8 +76837,6 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(RenderRecipe).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "handlePageChange", function (pageNumber) {
-      console.log("active page is ".concat(pageNumber)); // this.setState({ activePage: pageNumber });
-
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/getrecipes?page=' + pageNumber).then(function (res) {
         _this.setState({
           recipes: res.data.data,
@@ -77000,13 +76905,9 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      console.log(this.state.recipes); // console.log('search:', this.state.search)
-
       var filterrecipes = this.state.recipes.filter(function (recipe) {
         return recipe.title.toLowerCase().indexOf(_this3.state.search) !== -1;
-      }); // console.log('filter', filterrecipes.length)
-      // console.log('pageRangeDisplayed', this.state.pageRangeDisplayed)
-
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Admin Recipe"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-form d-inline-block"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -77041,7 +76942,7 @@ function (_Component) {
         }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "contents order-md-1 pl-0"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-          to: "post/" + recipe.id
+          to: "recipe/" + recipe.id
         }, recipe.title, " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "mb-3"
         }, recipe.prefer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -77278,7 +77179,47 @@ function (_Component) {
         className: "d-block"
       }, "Author : ", this.state.item.author, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "date-read"
-      }, "Date : ", this.state.item.created_at))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, this.state.item.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Date : ", this.state.item.created_at)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-md-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fitness-blog-sidebar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "add-widget mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/img/bg-img/add3.png",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "latest-blog-posts mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "single-latest-blog-post"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-thumbnail"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/img/blog-img/6.png",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-content"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#",
+        className: "post-title"
+      }, "Try our Gym"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "post-meta"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Our ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "Tranieer"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, "& Strong")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "add-widget mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/img/bg-img/add4.png",
+        alt: ""
+      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, this.state.item.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pt-5"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-title"
@@ -77963,7 +77904,6 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handlePhoto", function (e) {
-      // console.log("PHOTO", e.target.value);
       var files = e.target.files || e.dataTransfer.files;
       console.log("file", files);
       if (!files.length) return;
@@ -77985,14 +77925,6 @@ function (_Component) {
         author: author,
         body: body,
         image: image
-      }).then(function (res) {
-        console.log('from handle submit', res); // this.setState({
-        //     title: '',
-        //     prefer: '',
-        //     author: '',
-        //     body: '',
-        //     image: ''
-        // });
       }).then(function (error) {
         console.log(error);
       });
@@ -78030,8 +77962,6 @@ function (_Component) {
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/getposts/" + this.props.match.params.id).then(function (res) {
-        console.log('resssss edit', res.data);
-
         _this3.setState({
           id: res.data.id,
           title: res.data.title,
@@ -78049,9 +77979,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      console.log('image', this.state.image);
-      console.log('params', this.props.match.params.id);
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "edittttttttttttttttt"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Article Edit"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.onSubmit,
         encType: "multipart/form-data"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -78374,14 +78302,11 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      console.log(this.state.blogs); // console.log('search:', this.state.search)
-
+      console.log(this.state.blogs);
       var filterBlogs = this.state.blogs.filter(function (blog) {
         return blog.title.toLowerCase().indexOf(_this3.state.search) !== -1;
-      }); // console.log('filter', filterBlogs.length)
-      // console.log('pageRangeDisplayed', this.state.pageRangeDisplayed)
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Admin"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      });
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Admin Board "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-form d-inline-block"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "d-flex"

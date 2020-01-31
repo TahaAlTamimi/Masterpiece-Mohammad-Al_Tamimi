@@ -50,6 +50,9 @@ class RecipeController extends Controller
             'author' => 'required',
             // 'image'=>'image|mimes:jpeg,jpg,gif,png',
             'body' => 'required',]);
+
+
+            $recipe=new Recipe();
             if($request->get('image'))
             {
                $image = $request->get('image');
@@ -57,7 +60,7 @@ class RecipeController extends Controller
                \Image::make($request->get('image'))->save(public_path('storage/').$name);
              }
 
-            $recipe=new Recipe();
+           
             $recipe->title=$request->input('title');
             $recipe->prefer=$request->input('prefer');
             $recipe->author=$request->input('author');
@@ -113,6 +116,9 @@ class RecipeController extends Controller
             'author' => 'required',
             // 'image'=>'image|mimes:jpeg,jpg,gif,png',
             'body' => 'required',]);
+
+
+            
             $recipe=Recipe::findOrFail($id);
 
             if($request->get('image'))
@@ -120,14 +126,11 @@ class RecipeController extends Controller
                 $image = $request->get('image');
                 $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
                 \Image::make($request->get('image'))->save(public_path('storage/').$name);
-            $recipe->title=$request->input('title');
-            $recipe->prefer=$request->input('prefer');
-            $recipe->author=$request->input('author');
+          
             $recipe->image=$name ;
-            $recipe->body=$request->input('body');
-            $recipe->save();
+          
             
-            }else{
+            }
 
                 $recipe->title=$request->input('title');
                 $recipe->prefer=$request->input('prefer');
@@ -135,7 +138,7 @@ class RecipeController extends Controller
                 $recipe->body=$request->input('body');
                 $recipe->save();
 
-            }
+         
      
             return ($recipe);
 		

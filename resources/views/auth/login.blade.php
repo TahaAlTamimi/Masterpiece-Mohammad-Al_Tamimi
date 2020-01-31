@@ -68,7 +68,7 @@
                                     </a>
                                 @endif
                                 <p class="loginhere">
-                        Create a new account ? <a href="/register" class="loginhere-link">Login here</a>
+                        Create a new account ? <a href="/register" class="loginhere-link">Register Here</a>
                     </p>
                     <p class="loginhere">
                          <a href="/" class="loginhere-link">Home</a>
