@@ -111,20 +111,20 @@ export default class EidtRecipe extends Component {
                 <form onSubmit={this.onSubmit} encType='multipart/form-data'>
 
                     <div className="form-group">
-                        <label htmlFor="title">title</label>
+                        <label htmlFor="title">Title</label>
                         <input className="form-control" name='title' onChange={this.handleChange} value={this.state.title} id="title" rows="3" required />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="prefer">prefer</label>
+                        <label htmlFor="prefer">Prefer</label>
                         <input className="form-control" name='prefer' onChange={this.handleChange} value={this.state.prefer} id="prefer" rows="3" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="author">author</label>
+                        <label htmlFor="author">Author</label>
                         <input className="form-control" name='author' onChange={this.handleChange} value={this.state.author} id="author" rows="3" required />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="image">image</label>
+                        <label htmlFor="image">Image</label>
                         <input className="form-control" name='image' type='file' onChange={this.handlePhoto} id="image" />
                     </div>
 
@@ -132,7 +132,7 @@ export default class EidtRecipe extends Component {
 
 
                     <div className="form-group">
-                        <label htmlFor="body">Example textarea</label>
+                        <label htmlFor="body">Content</label>
                         <textarea className="form-control" name='body' id="body" onChange={this.handleChange} value={this.state.body} rows="5" required></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">

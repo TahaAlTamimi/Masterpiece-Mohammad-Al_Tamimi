@@ -48,7 +48,7 @@ class RecipeController extends Controller
             'title' => 'required',
             'prefer' => 'required',
             'author' => 'required',
-            'image'=>'image|mimes:jpeg,jpg,gif,png',
+            // 'image'=>'image|mimes:jpeg,jpg,gif,png',
             'body' => 'required',]);
 
 
@@ -114,7 +114,7 @@ class RecipeController extends Controller
             'title' => 'required',
             'prefer' => 'required',
             'author' => 'required',
-            'image'=>'image|mimes:jpeg,jpg,gif,png',
+            // 'image'=>'image|mimes:jpeg,jpg,gif,png',
             'body' => 'required',]);
 
 
@@ -155,7 +155,11 @@ class RecipeController extends Controller
     public function destroy(Request $request,$id)
     {
         Recipe::
-        where('id' , '=' , $id)  ->delete();
+        where('id' , '=' , $id) ->
+		where(function ($query) {
+			$query->where('user_id','=',Auth::user()->id)
+			->orWhere('role_id','=',Auth::user()->isAdmin); 
+		}) ->delete();
     }
     public function comment(Request $request,$recipe_id) {
 		$this->validate($request, [
@@ -188,7 +192,8 @@ class RecipeController extends Controller
 		
 		RecipeComment::  where('id' , '=' , $id)
         ->where(function ($query) {
-            $query->where('user_id','=',Auth::user()->id);
+            $query->where('user_id','=',Auth::user()->id)
+			->orWhere('role_id','=',Auth::user()->isAdmin); 
                
         })
         ->delete();

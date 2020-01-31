@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->Increments('id');
             $table->unsignedBigInteger('user_id');
             $table->string('question');
+            $table->integer('role_id')->default(1);
             $table->timestamps();
             $table->foreign('user_id')
             ->references('id')->on('users')

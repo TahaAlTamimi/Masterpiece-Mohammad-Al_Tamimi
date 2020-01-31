@@ -112,14 +112,14 @@ class QuestionController extends Controller
     public function destroy($id)
     {
        
-        Question::findOrFail($id)->where('user_id',Auth::user()->id) ->orWhere('role_id', Auth::user()->isAdmin)->delete();
+        Question::where('user_id',Auth::user()->id) ->orWhere('role_id', Auth::user()->isAdmin)->findOrFail($id)->delete();
         //
     }
 
     public function destroy2($id)
     {
        
-        Question::findOrFail($id)->delete();
+        Question::where('user_id',Auth::user()->id)->findOrFail($id)->delete();
         return back();
     }
 

@@ -76439,7 +76439,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "title"
-      }, "title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Title"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "title",
         onChange: this.handleChange,
@@ -76451,7 +76451,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "prefer"
-      }, "prefer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Prefer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "prefer",
         onChange: this.handleChange,
@@ -76463,7 +76463,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "author"
-      }, "author"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Author"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "author",
         onChange: this.handleChange,
@@ -76475,7 +76475,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "image"
-      }, "image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, "Image"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "form-control",
         name: "image",
         type: "file",
@@ -76485,7 +76485,7 @@ function (_Component) {
         className: "form-group"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "body"
-      }, "Example textarea"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+      }, "Content"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         className: "form-control",
         name: "body",
         id: "body",
@@ -77148,36 +77148,7 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/img/bg-img/add3.png",
         alt: ""
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "latest-blog-posts mb-100"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "single-latest-blog-post"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-thumbnail"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/img/blog-img/6.png",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "post-title"
-      }, "Try our Gym"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-meta"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Our ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Tranieer"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "& Strong")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "add-widget mb-100"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "/img/bg-img/add4.png",
-        alt: ""
-      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, this.state.item.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, this.state.item.body)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pt-5"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-title"

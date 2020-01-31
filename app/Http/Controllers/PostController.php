@@ -69,7 +69,7 @@ class PostController extends Controller
 			'title' => 'required',
 			'prefer' => 'required',
 			'author' => 'required',
-			'image'=>'image|mimes:jpeg,jpg,gif,png',
+			// 'image'=>'image|mimes:jpeg,jpg,gif,png',
 			'body' => 'required',
 			
 			
@@ -142,11 +142,11 @@ class PostController extends Controller
 		
 
 		Comment::where('id' , '=' , $id)
-		// ->
-		// where(function ($query) {
-		// 	$query->where('user_id','=',Auth::user()->id);
-		// 	// ->orWhere('role_id','=',Auth::user()->isAdmin); 
-		// })
+		->
+		where(function ($query) {
+			$query->where('user_id','=',Auth::user()->id)
+			->orWhere('role_id','=',Auth::user()->isAdmin); 
+		})
 		
 		
 		
