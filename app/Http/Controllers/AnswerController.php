@@ -41,10 +41,11 @@ class AnswerController extends Controller
      */
     public function store(Request $request,$question_id)
     {
-        // return $question_id;
+       
         $this->validate($request, [
             'answer' => 'required',
         ]);
+        
         $answer=new Answer;
         $answer->answer=$request->input('answer');
         $answer->question_id=$question_id;

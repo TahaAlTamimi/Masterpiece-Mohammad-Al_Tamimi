@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-// use App\Http\Controllers\Auth;
 
-// use App\Auth;
 use Auth;
 use App\Post;
 use App\Comment;
@@ -71,7 +69,7 @@ class PostController extends Controller
 			'title' => 'required',
 			'prefer' => 'required',
 			'author' => 'required',
-			// 'image'=>'image|mimes:jpeg,jpg,gif,png',
+			'image'=>'image|mimes:jpeg,jpg,gif,png',
 			'body' => 'required',
 			
 			
@@ -147,7 +145,7 @@ class PostController extends Controller
 		// ->
 		// where(function ($query) {
 		// 	$query->where('user_id','=',Auth::user()->id);
-		// 	// ->orWhere(1,'=',Auth::user()->isAdmin); 
+		// 	// ->orWhere('role_id','=',Auth::user()->isAdmin); 
 		// })
 		
 		

@@ -48,7 +48,7 @@ class RecipeController extends Controller
             'title' => 'required',
             'prefer' => 'required',
             'author' => 'required',
-            // 'image'=>'image|mimes:jpeg,jpg,gif,png',
+            'image'=>'image|mimes:jpeg,jpg,gif,png',
             'body' => 'required',]);
 
 
@@ -114,7 +114,7 @@ class RecipeController extends Controller
             'title' => 'required',
             'prefer' => 'required',
             'author' => 'required',
-            // 'image'=>'image|mimes:jpeg,jpg,gif,png',
+            'image'=>'image|mimes:jpeg,jpg,gif,png',
             'body' => 'required',]);
 
 

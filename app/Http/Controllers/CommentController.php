@@ -44,17 +44,6 @@ class CommentController extends Controller
     public function store()
     {
 
-        // return($post_id);
-        // // return ('done');
-        // $this->validate($request, [
-		// 	'comment' => 'required|max:255',
-		// ]);
-		// // create a new task based on user tasks relationship
-		// $comment= $request->user()->post()->comments()->create([
-		// 	'comment' => $request->comment,
-		// ]);
-		// // return task with user object
-		// return response()->json($comment->with('user','post')->find($comment->id));
     }
 
     /**

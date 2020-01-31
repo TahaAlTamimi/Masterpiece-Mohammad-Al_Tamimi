@@ -30,19 +30,7 @@ public function photoUpdate(Request $request){
         $user=Auth::user();
         $user->image_profile='/images/'.$imagename;
         $user->save();
-        // return User::create([
-        //     'name' => $data['name'],
-        //     'email' => $data['email'],
-        //     'password' => Hash::make($data['password']),
-        //     'image_profile'=>'/images/'.$imagename
-        //     ]);
-    }
-//  $user= User::create([
-//         'name' => $data['name'],
-//         'email' => $data['email'],
-//         'password' => Hash::make($data['password']),
-//     ]);
-//     $user->roles()->attach(Role::where('name','user')->first());
+        
     return view('user',array('user'=>Auth::user())) ;
 
 }
