@@ -36,18 +36,13 @@ export default class Show extends Component {
 
 
     handleSubmit(e) {
-        // stop browser's default behaviour of reloading on form submit
+        
         e.preventDefault();
         axios.post("/comment/" + this.props.match.params.id, {
             comment: this.state.comment
         })
             .then(response => {
-                // console.log('from handle submit:', response);
-                // set state
-                // this.setState({
-                //     tasks: [response.data, ...this.state.tasks]
-                // });
-                // then clear the value of textarea
+               
                 this.setState({
                     comment: '',
                     comments: [...this.state.comments, response.data]
@@ -88,7 +83,7 @@ export default class Show extends Component {
         axios.get("/getposts/" + this.props.match.params.id)
 
             .then(res => {
-                // console.log('resssss', res.data)
+                
                 this.setState({
                     item: res.data,
                     comments: []
@@ -101,12 +96,12 @@ export default class Show extends Component {
         axios.get("/getcomments/" + this.props.match.params.id)
             .then(res => {
                 console.log('comments', res.data)
-                // console.log('resssss33333',[...res.data])
+                
                 this.setState({
                     comments: [...res.data[0]],
                     roles: [...res.data[1]],
                 });
-                // console.log('state:', this.state.comments[0])
+                
 
             })
             .then(errors => {
@@ -121,14 +116,9 @@ export default class Show extends Component {
 
 
     render() {
-        // let { isEdit } = this.state
+       
         { this.state.roles.length > 0 ? console.log('roles:', this.state.roles[0].pivot.user_id) : console.log('no') }
-        // this.state.comments.length>0? console.log('commentyes',this.state.comments):console.log('nooo')
-        // console.log(isEdit)
-        //  console.log(this.state.comments[0].comment)
-        //    console.log(this.props)
-        // console.disableYellowBox = true;
-        // if (this.state.comments.length == 0) return <h1>loading..</h1>
+      
         return (
             <>
 
@@ -140,7 +130,6 @@ export default class Show extends Component {
                                 <p className="mb-5">
                                     <img width="100%" display='block'
                                         height="400" src={"/storage/" + this.state.item.image} />
-                                    {/* <img  className="thumbnail order-md-2" mode='fit' src={"/storage/" +this.state.item.image} /> */}
                                 </p>
                                 <h1 className="mb-4">
                                     {this.state.item.title}

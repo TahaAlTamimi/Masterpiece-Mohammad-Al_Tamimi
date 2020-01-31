@@ -26,12 +26,12 @@ export default class ShowRecipe extends Component {
         this.setState({
             recipecomment: e.target.value
         });
-        // console.log('onChange', this.state.recipecomment);
+    
     }
 
 
     handleSubmit(e) {
-        // stop browser's default behaviour of reloading on form submit
+        
         e.preventDefault();
         axios.post("/recipecomment/" + this.props.match.params.id, {
             recipecomment: this.state.recipecomment
@@ -40,11 +40,7 @@ export default class ShowRecipe extends Component {
                 if (response === 401) { console.log('catch') } else {
                     console.log('from handle submit catch:', response);
                 }
-                // set state
-                // this.setState({
-                //     tasks: [response.data, ...this.state.tasks]
-                // });
-                // then clear the value of textarea
+            
                 this.setState({
                     recipecomment: '',
                     recipecomments: [...this.state.recipecomments, response.data]
@@ -88,15 +84,14 @@ export default class ShowRecipe extends Component {
                 console.log(errors)
             })
         axios.get("/getrecipecomments/" + this.props.match.params.id)
-            // return 'doneeeeeeeeeez'
+            
             .then(res => {
-                // console.log('resssss22222', res.data, this.props.match.params.id)
-                // console.log('resssss33333',[...res.data])
+          
                 this.setState({
                     recipecomments: [...res.data[0]],
                     roles: [...res.data[1]],
                 });
-                // console.log('state:', this.state.recipecomments[0].name)
+               
 
             })
             .then(errors => {
@@ -116,7 +111,7 @@ export default class ShowRecipe extends Component {
     render() {
         console.log('this.props')
 
-        // if (this.state.recipecomments.length == 0) return <h1>loading..</h1>
+     
         return (
             <>
 
@@ -130,7 +125,6 @@ export default class ShowRecipe extends Component {
                                     
                                     <img width="100%" display='block'
                                         height="400" src={"/storage/" + this.state.item.image} />
-                                    {/* <img  className="thumbnail order-md-2" mode='fit' src={"/storage/" +this.state.item.image} /> */}
                                 </p>
 
                                 

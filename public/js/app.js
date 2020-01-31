@@ -75695,7 +75695,6 @@ function (_Component) {
     value: function handleSubmit(e) {
       var _this2 = this;
 
-      // stop browser's default behaviour of reloading on form submit
       e.preventDefault();
       console.log('from handle', this.state.answer);
       var answer = this.state.answer;
@@ -75732,7 +75731,6 @@ function (_Component) {
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/getquestion/" + this.props.match.params.id).then(function (res) {
-        // console.log('resssss', res.data)
         _this3.setState({
           questionitem: res.data
         });
@@ -75740,12 +75738,11 @@ function (_Component) {
         console.log(errors);
       });
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/getanswers/" + this.props.match.params.id).then(function (res) {
-        console.log('answes from get: ', res.data); // console.log('resssss33333',[...res.data])
+        console.log('answes from get: ', res.data);
 
         _this3.setState({
           answers: _toConsumableArray(res.data)
-        }); // console.log('state:', this.state.comments[0].name)
-
+        });
       }).then(function (errors) {
         console.log(errors);
       });
@@ -75755,13 +75752,11 @@ function (_Component) {
     value: function render() {
       var _this4 = this;
 
-      //    console.log(this.props)
       console.log('answer', this.state.answer);
       {
         this.state.questionitem.length == 0 ? console.log('no') : console.log('from return', this.state.questionitem[0].name);
       }
-      console.disableYellowBox = true; // if (this.state.comments.length == 0) return <h1>loading..</h1>
-
+      console.disableYellowBox = true;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].question), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, this.state.questionitem.length == 0 ? '' : this.state.questionitem[0].name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -76056,7 +76051,7 @@ function (_Component) {
   }, {
     key: "handleChange",
     value: function handleChange(e) {
-      this.setState(_defineProperty({}, e.target.name, e.target.value)); // console.log([e.target.name], e.target.value);
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
     }
   }, {
     key: "onSubmit",
@@ -76068,8 +76063,6 @@ function (_Component) {
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('/userquestion', {
         question: question
       }).then(function (res) {
-        // console.log('from handle submit', res);
-        // console.log("SUBMIT", res.data)
         _this2.setState({
           question: '',
           questions: res.data,
@@ -76085,13 +76078,10 @@ function (_Component) {
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/getquestion').then(function (res) {
-        // console.log('from qqq', res.data[1])
         _this3.setState({
           questions: res.data[0],
           roles: res.data[1]
-        }); // console.log('data question: ', res.data[0].name)
-        // console.log('data question: ', res.data[0].question)
-
+        });
       }).then(function (errors) {
         console.log(errors);
       });
@@ -76099,8 +76089,7 @@ function (_Component) {
         console.log('from answer', res.data[0]);
 
         _this3.setState({
-          answer: res.data[0] // roles:res.data[1]
-
+          answer: res.data[0]
         });
       }).then(function (errors) {
         console.log(errors);
@@ -76110,10 +76099,6 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this4 = this;
-
-      console.log('from state roles: ', this.state.roles.id); // console.log('from state answers: ', this.state.answer)
-      // this.st(ate.answer.length == 0 ? console.log('noooooooo') : console.log('id', this.state.answer[0].question_id)
-      //    console.log(this.state.roles.id==this.state.q.user_id ? 'yes':'no') 
 
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
@@ -76216,7 +76201,6 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(CommentsRecipe).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "edited", function () {
-      // console.log('idddd', this.state.isEdit)
       var isEdit = _this.state.isEdit;
 
       _this.setState({
@@ -76226,24 +76210,19 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "componentDidMount", function () {
-      // console.log('from mountedddddd')
       _this.setState({
         changeText: _this.props.recipecomment.comment
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "updatecomment", function (e) {
-      // console.log('frommmm edit',this.props.comment.id,'wanted: ',this.input.value)
       e.preventDefault();
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.put("/editcommentsrecipe/".concat(_this.props.recipecomment.id), {
         recipecomment: _this.input.value
       }).then(function (response) {
-        // console.log('successfully edited the comment', response.data);
         _this.setState({
           changeText: response.data.comment
-        }); // this.props.history.push('/');
-        // console.log('endd', this.props.comment)
-
+        });
       });
 
       _this.edited();
@@ -76269,13 +76248,7 @@ function (_Component) {
 
     _this.state = {
       isEdit: false
-    }; // bind
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.delete = this.delete.bind(this);
-    // this.edited = this.edited.bind(this);
-    // this.renderUpdateForm = this.renderUpdateForm.bind(this);
-
+    };
     return _this;
   } // handle change
 
@@ -76285,9 +76258,6 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      // console.log('endd', this.props.comment)
-      // console.log('yes', this.props.roles)
-      console.log('hello22', this.props.recipecomment.name);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.isEdit ? this.renderUpdateForm() : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "comment-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -76383,7 +76353,6 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handlePhoto", function (e) {
-      // console.log("PHOTO", e.target.value);
       var files = e.target.files || e.dataTransfer.files;
       console.log("file", files);
       if (!files.length) return;
@@ -77076,14 +77045,13 @@ function (_Component) {
     value: function handleChange(e) {
       this.setState({
         recipecomment: e.target.value
-      }); // console.log('onChange', this.state.recipecomment);
+      });
     }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       var _this2 = this;
 
-      // stop browser's default behaviour of reloading on form submit
       e.preventDefault();
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/recipecomment/" + this.props.match.params.id, {
         recipecomment: this.state.recipecomment
@@ -77092,12 +77060,7 @@ function (_Component) {
           console.log('catch');
         } else {
           console.log('from handle submit catch:', response);
-        } // set state
-        // this.setState({
-        //     tasks: [response.data, ...this.state.tasks]
-        // });
-        // then clear the value of textarea
-
+        }
 
         _this2.setState({
           recipecomment: '',
@@ -77133,15 +77096,11 @@ function (_Component) {
       }).then(function (errors) {
         console.log(errors);
       });
-      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/getrecipecomments/" + this.props.match.params.id) // return 'doneeeeeeeeeez'
-      .then(function (res) {
-        // console.log('resssss22222', res.data, this.props.match.params.id)
-        // console.log('resssss33333',[...res.data])
+      axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/getrecipecomments/" + this.props.match.params.id).then(function (res) {
         _this3.setState({
           recipecomments: _toConsumableArray(res.data[0]),
           roles: _toConsumableArray(res.data[1])
-        }); // console.log('state:', this.state.recipecomments[0].name)
-
+        });
       }).then(function (errors) {
         console.log(errors);
       });
@@ -77151,8 +77110,7 @@ function (_Component) {
     value: function render() {
       var _this4 = this;
 
-      console.log('this.props'); // if (this.state.recipecomments.length == 0) return <h1>loading..</h1>
-
+      console.log('this.props');
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "site-section",
         "data-stellar-background-ratio": "0.5"
@@ -77335,8 +77293,7 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "_isMounted", false);
 
     _defineProperty(_assertThisInitialized(_this), "handlePageChange", function (pageNumber) {
-      console.log("active page is ".concat(pageNumber)); // this.setState({ activePage: pageNumber });
-
+      console.log("active page is ".concat(pageNumber));
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/getposts?page=' + pageNumber).then(function (res) {
         _this.setState({
           blogs: res.data.data,
@@ -77390,13 +77347,10 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      console.log('wwwwww', this.state.blogs); // console.log('search:', this.state.search)
-
+      console.log('wwwwww', this.state.blogs);
       var filterBlogs = this.state.blogs.filter(function (blog) {
         return blog.title.toLowerCase().indexOf(_this3.state.search) !== -1;
-      }); // console.log('filter', filterBlogs.length)
-      // console.log('pageRangeDisplayed', this.state.pageRangeDisplayed)
-
+      });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search-form d-inline-block"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -77454,7 +77408,7 @@ function (_Component) {
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "latest-blog-posts mb-100"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Latest Posts"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "single-latest-blog-post"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-thumbnail"
@@ -77466,55 +77420,15 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#",
         className: "post-title"
-      }, "10 Healthy foods for a good living"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Try Our Gym"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "post-meta"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Our ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "Admin"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      }, "Traineer"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
       }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
-      }, "3 comments"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "single-latest-blog-post"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-thumbnail"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "img/blog-img/6.png",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "post-title"
-      }, "10 Healthy foods for a good living"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-meta"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Admin"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "3 comments"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "single-latest-blog-post"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-thumbnail"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "img/blog-img/6.png",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "post-title"
-      }, "10 Healthy foods for a good living"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "post-meta"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Admin"), " | in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "Health"), " | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#"
-      }, "3 comments")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "& Strong")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "add-widget mb-100"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: "#"
@@ -77595,7 +77509,6 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Comment).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "edited", function () {
-      // console.log('idddd', this.state.isEdit)
       var isEdit = _this.state.isEdit;
 
       _this.setState({
@@ -77605,24 +77518,19 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "componentDidMount", function () {
-      // console.log('from mountedddddd')
       _this.setState({
         changeText: _this.props.comment.comment
       });
     });
 
     _defineProperty(_assertThisInitialized(_this), "updatecomment", function (e) {
-      // console.log('frommmm edit',this.props.comment.id,'wanted: ',this.input.value)
       e.preventDefault();
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.put("/editcomments/".concat(_this.props.comment.id), {
         comment: _this.input.value
       }).then(function (response) {
-        // console.log('successfully edited the comment', response.data);
         _this.setState({
           changeText: response.data.comment
-        }); // this.props.history.push('/');
-        // console.log('endd', this.props.comment)
-
+        });
       });
 
       _this.edited();
@@ -77648,25 +77556,16 @@ function (_Component) {
 
     _this.state = {
       isEdit: false
-    }; // bind
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.delete = this.delete.bind(this);
-    // this.edited = this.edited.bind(this);
-    // this.renderUpdateForm = this.renderUpdateForm.bind(this);
-
+    };
     return _this;
-  } // handle change
-
+  }
 
   _createClass(Comment, [{
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      // console.log('endd', this.props.comment.name.length)
-      console.log('yes', this.props.roles); // console.log('hello22',this.state.changeText)
-
+      console.log('yes', this.props.roles);
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, this.state.isEdit ? this.renderUpdateForm() : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "comment-list"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -77748,13 +77647,11 @@ function (_Component) {
     _this.state = {
       comments: '',
       comment: ''
-    }; // bind
-
+    };
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
-  } // handle change
-
+  }
 
   _createClass(CommentEdit, [{
     key: "handleChange",
@@ -77763,14 +77660,12 @@ function (_Component) {
         comments: e.target.value
       });
       console.log('onChange', this.state.comments);
-    } // create handleSubmit method right after handleChange method
-
+    }
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       var _this2 = this;
 
-      // stop browser's default behaviour of reloading on form submit
       e.preventDefault();
       axios.put("/editcomments/".concat(this.props.match.params.id), {
         comments: this.state.comments
@@ -77779,16 +77674,13 @@ function (_Component) {
 
         _this2.props.history.push('/');
       });
-    } // get all tasks from backend
-
+    }
   }, {
     key: "getTasks",
     value: function getTasks() {
       var _this3 = this;
 
-      axios.get("/comments/".concat(this.props.match.params.id, "/edit")).then(function ( // console.log('jjjjjjjjj',response)
-      response //
-      //  console.log(response.data.tasks)
+      axios.get("/comments/".concat(this.props.match.params.id, "/edit")).then(function (response //
       ) {
         return _this3.setState({
           comment: response.data.comment,
@@ -77798,8 +77690,8 @@ function (_Component) {
     } // lifecycle method
 
   }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
+    key: "componentDidMount",
+    value: function componentDidMount() {
       this.getTasks();
     }
   }, {
@@ -78232,8 +78124,7 @@ function (_Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(RenderBlog).call(this, props));
 
     _defineProperty(_assertThisInitialized(_this), "handlePageChange", function (pageNumber) {
-      console.log("active page is ".concat(pageNumber)); // this.setState({ activePage: pageNumber });
-
+      console.log("active page is ".concat(pageNumber));
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get('/getposts?page=' + pageNumber).then(function (res) {
         _this.setState({
           blogs: res.data.data,
@@ -78485,17 +78376,10 @@ function (_Component) {
     value: function handleSubmit(e) {
       var _this2 = this;
 
-      // stop browser's default behaviour of reloading on form submit
       e.preventDefault();
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.post("/comment/" + this.props.match.params.id, {
         comment: this.state.comment
       }).then(function (response) {
-        // console.log('from handle submit:', response);
-        // set state
-        // this.setState({
-        //     tasks: [response.data, ...this.state.tasks]
-        // });
-        // then clear the value of textarea
         _this2.setState({
           comment: '',
           comments: [].concat(_toConsumableArray(_this2.state.comments), [response.data])
@@ -78524,7 +78408,6 @@ function (_Component) {
       var _this3 = this;
 
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/getposts/" + this.props.match.params.id).then(function (res) {
-        // console.log('resssss', res.data)
         _this3.setState({
           item: res.data,
           comments: []
@@ -78533,13 +78416,12 @@ function (_Component) {
         console.log(errors);
       });
       axios__WEBPACK_IMPORTED_MODULE_2___default.a.get("/getcomments/" + this.props.match.params.id).then(function (res) {
-        console.log('comments', res.data); // console.log('resssss33333',[...res.data])
+        console.log('comments', res.data);
 
         _this3.setState({
           comments: _toConsumableArray(res.data[0]),
           roles: _toConsumableArray(res.data[1])
-        }); // console.log('state:', this.state.comments[0])
-
+        });
       }).then(function (errors) {
         console.log(errors);
       });
@@ -78549,16 +78431,9 @@ function (_Component) {
     value: function render() {
       var _this4 = this;
 
-      // let { isEdit } = this.state
       {
         this.state.roles.length > 0 ? console.log('roles:', this.state.roles[0].pivot.user_id) : console.log('no');
-      } // this.state.comments.length>0? console.log('commentyes',this.state.comments):console.log('nooo')
-      // console.log(isEdit)
-      //  console.log(this.state.comments[0].comment)
-      //    console.log(this.props)
-      // console.disableYellowBox = true;
-      // if (this.state.comments.length == 0) return <h1>loading..</h1>
-
+      }
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "site-section",
         "data-stellar-background-ratio": "0.5"
@@ -78680,7 +78555,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // import Modal from './Modal';
+
 
 var Blog =
 /*#__PURE__*/
@@ -78716,8 +78591,7 @@ function (_Component) {
   }, {
     key: "onSubmit",
     value: function onSubmit(e) {
-      e.preventDefault(); // const { weight } = this.state
-
+      e.preventDefault();
       console.log('from submit', this.state.weight / Math.pow(this.state.tall / 100, 2));
     }
   }, {

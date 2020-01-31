@@ -9,12 +9,7 @@ class CommentsRecipe extends Component {
 
 
         };
-        // bind
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
-        // this.delete = this.delete.bind(this);
-        // this.edited = this.edited.bind(this);
-        // this.renderUpdateForm = this.renderUpdateForm.bind(this);
+      
     }
     // handle change
 
@@ -25,7 +20,6 @@ class CommentsRecipe extends Component {
 
     edited = () => {
 
-        // console.log('idddd', this.state.isEdit)
         let { isEdit } = this.state
         this.setState({
             isEdit: !isEdit,
@@ -34,7 +28,6 @@ class CommentsRecipe extends Component {
     }
 
     componentDidMount = () => {
-        // console.log('from mountedddddd')
         this.setState({
             changeText: this.props.recipecomment.comment
         })
@@ -42,21 +35,17 @@ class CommentsRecipe extends Component {
     }
 
     updatecomment = (e) => {
-        // console.log('frommmm edit',this.props.comment.id,'wanted: ',this.input.value)
         e.preventDefault();
         axios.put(`/editcommentsrecipe/${this.props.recipecomment.id}`, {
             recipecomment: this.input.value
         })
             .then(response => {
-                // console.log('successfully edited the comment', response.data);
                 this.setState({
                     changeText: response.data.comment
                 })
 
 
-                // this.props.history.push('/');
-                // console.log('endd', this.props.comment)
-
+              
 
 
             });
@@ -86,9 +75,7 @@ class CommentsRecipe extends Component {
     }
 
     render() {
-        // console.log('endd', this.props.comment)
-        // console.log('yes', this.props.roles)
-        console.log('hello22',this.props.recipecomment.name)
+       
         return (
             <>
      

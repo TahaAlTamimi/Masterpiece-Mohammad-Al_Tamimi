@@ -9,14 +9,9 @@ class Comment extends Component {
 
 
         };
-        // bind
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
-        // this.delete = this.delete.bind(this);
-        // this.edited = this.edited.bind(this);
-        // this.renderUpdateForm = this.renderUpdateForm.bind(this);
+     
     }
-    // handle change
+   
 
 
 
@@ -25,7 +20,7 @@ class Comment extends Component {
 
     edited = () => {
 
-        // console.log('idddd', this.state.isEdit)
+      
         let { isEdit } = this.state
         this.setState({
             isEdit: !isEdit,
@@ -34,7 +29,7 @@ class Comment extends Component {
     }
 
     componentDidMount = () => {
-        // console.log('from mountedddddd')
+      
         this.setState({
             changeText: this.props.comment.comment
         })
@@ -42,20 +37,19 @@ class Comment extends Component {
     }
 
     updatecomment = (e) => {
-        // console.log('frommmm edit',this.props.comment.id,'wanted: ',this.input.value)
+      
         e.preventDefault();
         axios.put(`/editcomments/${this.props.comment.id}`, {
             comment: this.input.value
         })
             .then(response => {
-                // console.log('successfully edited the comment', response.data);
+                
                 this.setState({
                     changeText: response.data.comment
                 })
 
 
-                // this.props.history.push('/');
-                // console.log('endd', this.props.comment)
+                
 
 
 
@@ -86,9 +80,9 @@ class Comment extends Component {
     }
 
     render() {
-        // console.log('endd', this.props.comment.name.length)
+        
         console.log('yes', this.props.roles)
-        // console.log('hello22',this.state.changeText)
+        
         return (
             <>
                 <div>

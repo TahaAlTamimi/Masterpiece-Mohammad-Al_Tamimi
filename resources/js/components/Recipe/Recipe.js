@@ -73,26 +73,19 @@ export default class Recipe extends Component {
             <>
 
                 <div className="img-fluid">
-                    {/* <div className="breadcumb-area bg-img bg-overlay" style={{ backgroundImage: 'url(img/bg-img/rec.jpg)', maxWidth: '100%' }}> */}
-
+                   
 
                     <div className="bradcumbContent">
                         <div className="container">
                             <div className="row">
                                 <div className="col-12">
-                                    {/* <h2>Recipe</h2> */}
-                                    {/* <nav aria-label="breadcrumb"> */}
-                                    {/* <ol className="breadcrumb">
-                                                <li className="breadcrumb-item">Home</li>
-                                                <li className="breadcrumb-item active" aria-current="page">Blog</li>
-                                            </ol> */}
-                                    {/* </nav> */}
+                                 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {/* </div> */}
+               
 
 
 
@@ -128,7 +121,6 @@ export default class Recipe extends Component {
 
                                                     </div>
                                                     <Link to={"recipe/" + recipe.id}><h4 className="post-title">{recipe.title} </h4></Link>
-                                                    {/* <a href="#" className="post-title">10 Healthy foods for a good living</a> */}
 
                                                     <div className="post-meta">
                                                         <p>By<a href="#"> {recipe.author}</a> | in Articles | <a href="#">3 comments</a></p>

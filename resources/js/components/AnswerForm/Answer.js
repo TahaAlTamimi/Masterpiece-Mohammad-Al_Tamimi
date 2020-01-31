@@ -29,7 +29,7 @@ export default class Answer extends Component {
 
 
     handleSubmit(e) {
-        // stop browser's default behaviour of reloading on form submit
+      
         e.preventDefault();
         console.log('from handle', this.state.answer)
         const { answer } = this.state
@@ -63,7 +63,7 @@ export default class Answer extends Component {
         axios.get("/getquestion/" + this.props.match.params.id)
 
             .then(res => {
-                // console.log('resssss', res.data)
+              
                 this.setState({
                     questionitem: res.data,
                    
@@ -76,12 +76,12 @@ export default class Answer extends Component {
         axios.get("/getanswers/" + this.props.match.params.id)
             .then(res => {
                 console.log('answes from get: ', res.data)
-                // console.log('resssss33333',[...res.data])
+               
                 this.setState({
                     answers: [...res.data],
                   
                 });
-                // console.log('state:', this.state.comments[0].name)
+              
 
             })
             .then(errors => {
@@ -97,11 +97,11 @@ export default class Answer extends Component {
 
 
     render() {
-        //    console.log(this.props)
+    
         console.log('answer', this.state.answer)
         { this.state.questionitem.length == 0 ? console.log('no') : console.log('from return', this.state.questionitem[0].name) }
         console.disableYellowBox = true;
-        // if (this.state.comments.length == 0) return <h1>loading..</h1>
+       
         return (
             <>
 

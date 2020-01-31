@@ -31,7 +31,6 @@ export default class EidtRecipe extends Component {
         console.log([e.target.name], e.target.value);
     }
     handlePhoto = e => {
-        // console.log("PHOTO", e.target.value);
         let files = e.target.files || e.dataTransfer.files;
         console.log("file", files);
         if (!files.length) return;
@@ -139,7 +138,6 @@ export default class EidtRecipe extends Component {
                     <button type="submit" className="btn btn-primary">
                         Edit
                     </button>
-                    {/* <Link className="btn btn-primary" type="submit" to={"post/" + blog.id}>edit </Link> */}
                     <Link className="btn btn" type="submit" to={'/recipeAdmin'}>Back recipe </Link>
                 </form>
    

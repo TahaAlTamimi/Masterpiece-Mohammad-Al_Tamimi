@@ -23,11 +23,8 @@ export default class App extends Component {
     render() {
         return (
             <>
-                {/* <div>
-                    <h1>Iam app compoooooooooooooooonent</h1>
-                </div> */}
+              
                 <BrowserRouter>
-                    {/* <Route path="/home" component={Home} exact /> */}
                     <Route path='/' component={Home} exact />
                     <Route path='/post' component={Form} exact />
                     <Route path='/blog' component={Blog} exact />
@@ -48,15 +45,7 @@ export default class App extends Component {
 
                     <Route path='/EditRecipe/:id' exact render={props => <EditRecipe{...props} />} />
                     </BrowserRouter>
-                {/* <Router>
-
-                    <Route exact path='/' Component={Form} />
-                    <Route exact path='/post' Component={Blog} />
-
-                </Router> */}
-
-                {/* <Form/> */}
-
+               
 
             </>
 

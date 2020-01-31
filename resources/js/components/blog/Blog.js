@@ -24,7 +24,7 @@ export default class Blog extends Component {
 
     handlePageChange = (pageNumber) => {
         console.log(`active page is ${pageNumber}`);
-        // this.setState({ activePage: pageNumber });
+       
         axios.get('/getposts?page=' + pageNumber)
 
             .then(res => {
@@ -75,7 +75,7 @@ export default class Blog extends Component {
 
     render() {
         console.log('wwwwww',this.state.blogs)
-        // console.log('search:', this.state.search)
+     
         let filterBlogs = this.state.blogs.filter(
             (blog) => {
                 return blog.title.toLowerCase().indexOf(this.state.search) !== -1
@@ -84,8 +84,7 @@ export default class Blog extends Component {
         )
 
 
-        // console.log('filter', filterBlogs.length)
-        // console.log('pageRangeDisplayed', this.state.pageRangeDisplayed)
+      
         return (
             <>
 
@@ -135,7 +134,6 @@ export default class Blog extends Component {
                                                        
                                                     </div>
                                                     <Link  to={"post/" + blog.id}><h4 className="post-title">{blog.title} </h4></Link>
-                                                    {/* <a href="#" className="post-title">10 Healthy foods for a good living</a> */}
 
                                                     <div className="post-meta">
                                                         <p>By<a href="#"> {blog.author}</a> | in Articles  </p>
@@ -172,48 +170,28 @@ export default class Blog extends Component {
                                         <a href="#"><img src={"img/bg-img/add3.png"} alt="" /></a>
                                     </div>
 
+
+
                                     <div className="latest-blog-posts mb-100">
-                                        <h5>Latest Posts</h5>
+                                       
                                         <div className="single-latest-blog-post">
                                             <div className="post-thumbnail">
                                                 <img src={"img/blog-img/6.png"} alt="" />
                                             </div>
                                             <div className="post-content">
 
-                                                <a href="#" className="post-title">10 Healthy foods for a good living</a>
+                                                <a href="#" className="post-title">Try Our Gym</a>
 
                                                 <div className="post-meta">
-                                                    <p>By <a href="#">Admin</a> | in <a href="#">Health</a> | <a href="#">3 comments</a></p>
+                                                    <p>Our <a href="#">Traineer</a> | in <a href="#">Health</a> | <a href="#">& Strong</a></p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="single-latest-blog-post">
-                                            <div className="post-thumbnail">
-                                                <img src={"img/blog-img/6.png"} alt="" />
-                                            </div>
-                                            <div className="post-content">
 
-                                                <a href="#" className="post-title">10 Healthy foods for a good living</a>
-
-                                                <div className="post-meta">
-                                                    <p>By <a href="#">Admin</a> | in <a href="#">Health</a> | <a href="#">3 comments</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="single-latest-blog-post">
-                                            <div className="post-thumbnail">
-                                                <img src={"img/blog-img/6.png"} alt="" />
-                                            </div>
-                                            <div className="post-content">
-
-                                                <a href="#" className="post-title">10 Healthy foods for a good living</a>
-
-                                                <div className="post-meta">
-                                                    <p>By <a href="#">Admin</a> | in <a href="#">Health</a> | <a href="#">3 comments</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      
                                     </div>
+
+
 
                                     <div className="add-widget mb-100">
                                         <a href="#"><img src={"img/bg-img/add4.png"} alt="" /></a>

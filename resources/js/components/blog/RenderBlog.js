@@ -23,7 +23,6 @@ export default class RenderBlog extends Component {
 
     handlePageChange = (pageNumber) => {
         console.log(`active page is ${pageNumber}`);
-        // this.setState({ activePage: pageNumber });
         axios.get('/getposts?page=' + pageNumber)
 
             .then(res => {
@@ -137,7 +136,6 @@ export default class RenderBlog extends Component {
 
                                     </div>
                                     <div className="post-entry-2 d-flex">
-                                        {/* <img  className="thumbnail order-md-2" mode='fit' src={"/storage/" + blog.image} /> */}
                                         <div className="thumbnail order-md-2" style={{ backgroundImage: `url(${"/storage/" + blog.image})` }}></div>
                                         <div className="contents order-md-1 pl-0">
                                             <h2> <Link to={"post/" + blog.id}>{blog.title} </Link></h2>

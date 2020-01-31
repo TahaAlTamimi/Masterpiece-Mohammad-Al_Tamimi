@@ -138,7 +138,6 @@ export default class EidtAdminForm extends Component {
                     <button type="submit" className="btn btn-primary">
                         Edit
                     </button>
-                    {/* <Link className="btn btn-primary" type="submit" to={"post/" + blog.id}>edit </Link> */}
                     <Link className="btn btn" type="submit" to={'/blogAdmin'}>Back </Link>
                 </form>
    

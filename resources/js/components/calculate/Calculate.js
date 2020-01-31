@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Popup from "reactjs-popup";
-// import Modal from './Modal';
+
 
 export default class Blog extends Component {
     constructor(props) {
@@ -44,7 +44,7 @@ export default class Blog extends Component {
 
         e.preventDefault();
 
-        // const { weight } = this.state
+        
         console.log('from submit', ((this.state.weight) / ((this.state.tall / 100) ** 2)))
 
 
@@ -59,7 +59,7 @@ export default class Blog extends Component {
         return (
             <>
 
-                {/* <h1>calculate </h1> */}
+               
                 <div className="imgcontainer" >
                     <img src="https://epsi.eu/wp-content/uploads/2019/04/euhealth.png" width="100%" style={{ height: ' 400px' }} />
                 </div>
@@ -104,7 +104,7 @@ export default class Blog extends Component {
                         </select>
                     </div>
 
-                    {/* <button>hello</button> */}
+                
 
                 </form>
 
@@ -119,7 +119,7 @@ export default class Blog extends Component {
 
 
 
-                        {/* body type */}
+                       
 
                         <div>
 

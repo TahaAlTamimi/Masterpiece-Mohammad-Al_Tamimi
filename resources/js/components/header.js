@@ -11,11 +11,9 @@ export default class Header extends Component {
     <div>
         <Link to='/'>Home</Link>
         <Link to='/post'>Bolg</Link>
-        {/* <Link to='/post/{id}'>Show</Link> */}
 
         <Route exact path='/' Component={Form}/>
         <Route exact path='/post' Component={Blog}/>
-        {/* <Route exact path='/post/{id}' Component={Show}/> */}
     </div>
 
 

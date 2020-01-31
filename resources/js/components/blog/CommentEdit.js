@@ -15,20 +15,20 @@ class CommentEdit extends Component {
             comments: '',
             comment: ''
         };
-        // bind
+       
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    // handle change
+    
     handleChange(e) {
         this.setState({
             comments: e.target.value
         });
         console.log('onChange', this.state.comments);
     }
-    // create handleSubmit method right after handleChange method
+   
     handleSubmit(e) {
-        // stop browser's default behaviour of reloading on form submit
+        
         e.preventDefault();
         axios
             .put(`/editcomments/${this.props.match.params.id}`, {
@@ -39,12 +39,12 @@ class CommentEdit extends Component {
                 this.props.history.push('/');
             });
     }
-    // get all tasks from backend
+    
     getTasks() {
         axios.get(`/comments/${this.props.match.params.id}/edit`).then((
-            // console.log('jjjjjjjjj',response)
+           
             response //
-            //  console.log(response.data.tasks)
+            
         ) =>
             this.setState({
                 comment: response.data.comment,
@@ -53,7 +53,7 @@ class CommentEdit extends Component {
         );
     }
     // lifecycle method
-    componentWillMount() {
+    componentDidMount() {
         this.getTasks();
     }
 

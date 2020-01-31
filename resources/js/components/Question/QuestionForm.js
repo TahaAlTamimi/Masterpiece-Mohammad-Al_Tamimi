@@ -9,7 +9,7 @@ export default class QuestionForm extends Component {
             question: '',
             questions: [],
             answer: [],
-            roles:''
+            roles: ''
 
 
         };
@@ -33,7 +33,7 @@ export default class QuestionForm extends Component {
     handleChange(e) {
 
         this.setState({ [e.target.name]: e.target.value });
-        // console.log([e.target.name], e.target.value);
+
     }
 
     onSubmit(e) {
@@ -43,8 +43,7 @@ export default class QuestionForm extends Component {
         const { question } = this.state
         axios.post('/userquestion', { question })
             .then(res => {
-                // console.log('from handle submit', res);
-                // console.log("SUBMIT", res.data)
+
                 this.setState({
                     question: '',
                     questions: res.data,
@@ -64,15 +63,12 @@ export default class QuestionForm extends Component {
     componentDidMount() {
         axios.get('/getquestion')
             .then(res => {
-                // console.log('from qqq', res.data[1])
                 this.setState({
 
-                    questions:res.data[0],
-                    roles:res.data[1]
+                    questions: res.data[0],
+                    roles: res.data[1]
 
                 })
-                // console.log('data question: ', res.data[0].name)
-                // console.log('data question: ', res.data[0].question)
             })
 
             .then(errors => {
@@ -84,7 +80,6 @@ export default class QuestionForm extends Component {
                 console.log('from answer', res.data[0])
                 this.setState({
                     answer: res.data[0],
-                    // roles:res.data[1]
 
                 })
             })
@@ -98,92 +93,87 @@ export default class QuestionForm extends Component {
 
 
     render() {
-        console.log('from state roles: ', this.state.roles.id)
-        // console.log('from state answers: ', this.state.answer)
-        // this.st(ate.answer.length == 0 ? console.log('noooooooo') : console.log('id', this.state.answer[0].question_id)
-    //    console.log(this.state.roles.id==this.state.q.user_id ? 'yes':'no') 
-     
+
         return (
             <>
-            <div className="container">
+                <div className="container">
 
-                <h1> Add Your Question & Get Answer From Expert </h1>
-                <form onSubmit={this.onSubmit} >
+                    <h1> Add Your Question & Get Answer From Expert </h1>
+                    <form onSubmit={this.onSubmit} >
 
-                    <div className="form-group">
-                        
-                        <input className="form-control" name='question' placeholder='add your questions???' onChange={this.handleChange} value={this.state.question} id="question" rows="3" required />
-                    </div>
+                        <div className="form-group">
 
-                    <button type="submit" className="btn btn-primary">
-                        Puplish
+                            <input className="form-control" name='question' placeholder='add your questions???' onChange={this.handleChange} value={this.state.question} id="question" rows="3" required />
+                        </div>
+
+                        <button type="submit" className="btn btn-primary">
+                            Puplish
                   </button>
 
-                </form>
-                <hr />
-                <hr />
+                    </form>
+                    <hr />
+                    <hr />
 
 
-             
 
-                <div>
-                    {this.state.answer.map(q =>
 
-                        <div key={q.id} className="card mb-3">
+                    <div>
+                        {this.state.answer.map(q =>
 
-                           
-                            <div >
-                               
+                            <div key={q.id} className="card mb-3">
+
+
+                                <div >
+
                                     <div className="card-body">
                                         <h5 className="card-title" >
-                                             {q.question} ?
+                                            {q.question} ?
                                         </h5>
-                                   
-                               
-                                <div>{q.answer ? 
-                                    
-                                        
-                                           
+
+
+                                        <div>{q.answer ?
+
+
+
                                             <p className="card-text" >
 
                                                 {q.answer.answer}
-                                                {/* <hr/>  */}
 
-                                            </p> 
-                                           
+                                            </p>
 
-                                :
-                                   
-                                        <p className="card-text">no answers</p>
-                                 
-                                      
-                                }</div>
-                            
 
-                                
+                                            :
 
+                                            <p className="card-text">no answers</p>
+
+
+                                        }</div>
+
+
+
+
+                                    </div>
+                                    {this.state.roles.id == q.user.id ? <button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button> : ''}
+                                    {this.state.roles.id == 1 ? <button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button> : ''}
+
+
+
+
+                                </div>
                             </div>
-                            {this.state.roles.id==q.user.id?<button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button>:''}
-                            {this.state.roles.id==1?<button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button>:''}
-                            
-                            
-                           
-                          
-                            </div>
-                        </div>
 
-                    )
-                   
-                    }
+                        )
+
+                        }
+
+                    </div>
+
+
+
+
+
 
                 </div>
-
-
-
-
-               
-
-            </div>
             </>
         );
     }
