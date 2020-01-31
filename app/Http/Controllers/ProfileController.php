@@ -35,6 +35,6 @@ public function photoUpdate(Request $request){
 
 }
 
-
+}
 
 }
