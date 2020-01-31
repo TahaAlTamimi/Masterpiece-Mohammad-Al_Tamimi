@@ -23,12 +23,7 @@ class QuestionController extends Controller
         ->get();
       
         return response()->json([$question,Auth::user()]);
-        // $comments=User::
-		// join('comments','users.id','=','comments.user_id')
-		// ->join('posts','comments.post_id','=','posts.id')
-		// ->select('users.name','comments.*')
-		// ->where(['posts.id'=>$post_id])
-		// ->get();
+     
     }
 
     /**
@@ -57,13 +52,9 @@ class QuestionController extends Controller
         $question->user_id=$request->user()->id;
 		$question->question=$request->input('question');
 		$question->save();
-        // return $question;
-        
-        // $question=Question::
-        // join('users')
-        // ->join('answers');
+    
         $questions = Question::with('answer','user')->get();
-        // ->select('name','question','answer','question_id')
+     
         
       
         return response()->json($questions);
@@ -78,17 +69,10 @@ class QuestionController extends Controller
      */
     public function show($id)
     {
-    //  $question=Question::
-    //  join('')
-     
-    //  findOrfail($id);
-    //  return response()->json($question);
+  
 
     $question=Question::with('answer','user')
-    // // join('questions','users.id','=','questions.user_id')
-    // join('users','users.id','=','questions.user_id')
-    // ->select('users.name','questions.*')
-    // ->where(['questions.id'=>$id])
+  
     ->get();
   
     return response()->json($question);
@@ -142,21 +126,11 @@ class QuestionController extends Controller
     public function try()
     {
        
-        // $question=Question::
-        // join('users','users.id','=','questions.user_id')
-        // ->join('answers','answers.question_id','=','questions.id')
-        // ->select('name','question','answer','question_id')
-        // ->get();
+      
 
         $questions = Question::with('answer','user')->get();
     return response()->json([$questions,Auth::user()]);
       
-        // return response()->json($question);
-        // $comments=User::
-		// join('comments','users.id','=','comments.user_id')
-		// ->join('posts','comments.post_id','=','posts.id')
-		// ->select('users.name','comments.*')
-		// ->where(['posts.id'=>$post_id])
-		// ->get();
+     
     }
 }

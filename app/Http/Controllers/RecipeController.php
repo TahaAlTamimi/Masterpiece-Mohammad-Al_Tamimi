@@ -11,10 +11,7 @@ use Auth;
 class RecipeController extends Controller
 {
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth')->except(['index','show',' showing']);
-    // }
+ 
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +19,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        $recipes=Recipe::paginate(3);
+        $recipes=Recipe::orderByRaw('id DESC')->paginate(3);
 		return response()->json($recipes);
         //
     }
@@ -65,13 +62,11 @@ class RecipeController extends Controller
             $recipe->prefer=$request->input('prefer');
             $recipe->author=$request->input('author');
             $recipe->image=$name ;
-         //    $recipe->image=$img_name;
+         
             $recipe->body=$request->input('body');
          
      
          $recipe->save();
-         // $request->image->move(public_path('uploads'),$img_name);
-     
             return $recipe;
 
 
@@ -169,19 +164,19 @@ class RecipeController extends Controller
 		$recipecomment->comment=$request->input('recipecomment');
 		$recipecomment->save();
 		return $recipecomment;
-		// return $post_id;
+		
 		
     }
     
     public function showing($recipe_id) {
-        // return 'doneeeeeeeeeeeee';
+       
 		$recipecomments=User::
 		join('recipe_comments','users.id','=','recipe_comments.user_id')
 		->join('recipes','recipe_comments.recipe_id','=','recipes.id')
 		->select('users.name','recipe_comments.*')
 		->where(['recipes.id'=>$recipe_id])
 		->get();
-		// return 'doneeeeeez';
+		
 		return response()->json([$recipecomments,Auth::user()->roles]);
 		
 	}
@@ -191,32 +186,26 @@ class RecipeController extends Controller
 		RecipeComment::  where('id' , '=' , $id)
         ->where(function ($query) {
             $query->where('user_id','=',Auth::user()->id);
-                //   ->orWhere('title', '=', 'Admin');
+               
         })
         ->delete();
-		// return('doneeeeeeeeeee');
-		//
+		
 	}
 
 	public function commentsedit($id) {
-		// $recipecomment = RecipeComment::findOrFail($id);
-		// return response()->json([
-		// 	'recipecomment' => $recipecomment,
-		// ]);
-		//
+	
 	}
 
 	public function commentsupdate(Request $request, $id) {
 		
-		// $input = $request->all();
+		
         $recipecomment = RecipeComment::findOrFail($id);
         $recipecomment->comment=$request->input('recipecomment');
 		$recipecomment->save();
-		// return response()->json($comment->find($comment->id));
+		
 		return($recipecomment);
 
 		
-		// return('doneeeeeeeeeeee');
 
 
 

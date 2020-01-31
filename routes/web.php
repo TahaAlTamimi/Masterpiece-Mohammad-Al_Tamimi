@@ -119,3 +119,5 @@ Route::get('/wtry/{id}', 'PostController@wtry');
 Route::post('/profile', 'ProfileController@photoUpdate');
 
 Route::get('/a', 'ProfileController@all');
+
+Route::get('/trying', 'PostController@all');

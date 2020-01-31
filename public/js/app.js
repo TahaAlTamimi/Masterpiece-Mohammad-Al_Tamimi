@@ -77449,7 +77449,7 @@ function (_Component) {
     value: function render() {
       var _this3 = this;
 
-      console.log(this.state.blogs); // console.log('search:', this.state.search)
+      console.log('wwwwww', this.state.blogs); // console.log('search:', this.state.search)
 
       var filterBlogs = this.state.blogs.filter(function (blog) {
         return blog.title.toLowerCase().indexOf(_this3.state.search) !== -1;
@@ -77497,9 +77497,7 @@ function (_Component) {
           className: "post-meta"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "By", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "#"
-        }, " ", blog.author), " | in Articles | ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#"
-        }, "3 comments"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, blog.prefer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, " ", blog.author), " | in Articles  ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, blog.prefer), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "post-date"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, blog.created_at))));
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

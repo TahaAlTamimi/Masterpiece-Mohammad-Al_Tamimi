@@ -74,7 +74,7 @@ export default class Blog extends Component {
 
 
     render() {
-        console.log(this.state.blogs)
+        console.log('wwwwww',this.state.blogs)
         // console.log('search:', this.state.search)
         let filterBlogs = this.state.blogs.filter(
             (blog) => {
@@ -91,7 +91,6 @@ export default class Blog extends Component {
 
 
             
-
 
                 <hr />
                 <div className="search-form d-inline-block">
@@ -127,6 +126,8 @@ export default class Blog extends Component {
                                             return (
 
                                                 <div className="col-12" key={blog.id}>
+
+                                                   
                                                     <div className="single-blog-post mb-100">
 
                                                         <div className="blog-post-thumb mb-30"></div>
@@ -137,7 +138,7 @@ export default class Blog extends Component {
                                                     {/* <a href="#" className="post-title">10 Healthy foods for a good living</a> */}
 
                                                     <div className="post-meta">
-                                                        <p>By<a href="#"> {blog.author}</a> | in Articles | <a href="#">3 comments</a></p>
+                                                        <p>By<a href="#"> {blog.author}</a> | in Articles  </p>
                                                     </div>
 
                                                     <p>{blog.prefer}</p>
