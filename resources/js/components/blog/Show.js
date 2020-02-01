@@ -142,12 +142,25 @@ export default class Show extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <div className="col-12 col-md-4">
+                                <div className="fitness-blog-sidebar">
 
+
+                                    <div className="add-widget mb-100">
+                                        <a href="#"><img src={"/img/bg-img/add3.png"} alt="" /></a>
+                                    </div>
+
+                                
+
+
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
-                </div>
+               
                 <h5>{this.state.item.body}</h5>
-
+                </div>
 
 
 

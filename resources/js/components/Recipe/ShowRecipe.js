@@ -115,7 +115,6 @@ export default class ShowRecipe extends Component {
         return (
             <>
 
-
                 <div className="site-section" data-stellar-background-ratio="0.5">
                     <div className="container">
                         <div className="row">

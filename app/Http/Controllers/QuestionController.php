@@ -18,9 +18,9 @@ class QuestionController extends Controller
     public function index()
     {
        
-        $question=User::
-        join('questions','users.id','=','questions.user_id')
-        ->get();
+        $question=User::join('questions','users.id','=','questions.user_id')
+        ->
+       get();
       
         return response()->json([$question,Auth::user()]);
      

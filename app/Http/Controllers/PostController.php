@@ -69,14 +69,14 @@ class PostController extends Controller
 			'title' => 'required',
 			'prefer' => 'required',
 			'author' => 'required',
-			// 'image'=>'image|mimes:jpeg,jpg,gif,png',
+			// 'image'=>'mimes:jpeg,bmp,png',
 			'body' => 'required',
 			
 			
 		]);
 
 		$post = Post::findOrFail($id);
-		if($request->get('image'))
+		if(!($request->hasFile('image')))
 		{
 		   $image = $request->get('image');
 		   $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];

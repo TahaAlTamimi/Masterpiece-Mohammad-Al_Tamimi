@@ -7,6 +7,8 @@ export default class AllQuestion extends Component {
         this.state = {
 
             questions: [],
+            answer: '',
+            answers: []
 
 
         };
@@ -37,6 +39,18 @@ export default class AllQuestion extends Component {
             .then(errors => {
                 console.log(errors)
             })
+
+        axios.get('/try')
+            .then(res => {
+                console.log('from answer', res.data[0])
+                this.setState({
+                    answer: res.data[0],
+
+                })
+            })
+            .then(errors => {
+                console.log(errors)
+            })
     }
 
 
@@ -55,7 +69,7 @@ export default class AllQuestion extends Component {
                         <div className="card mb-3">
                             <Link to={"question/" + question.id} key={question.id}>
                                 <p className="card-text" >
-Question no. 
+                                    Question no.
                                     {question.id}
                                 </p>
                                 <div >
@@ -65,6 +79,12 @@ Question no.
 
                                             {question.question}
                                         </h5>
+
+                                        <p className="card-text" >
+
+                                            {/* {question.answer.answer} */}
+
+                                        </p>
                                     </div>
                                 </div>
 
@@ -72,6 +92,7 @@ Question no.
 
                         </div>)
                 })}
+  
 
 
 

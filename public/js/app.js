@@ -75712,7 +75712,9 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(AllQuestion).call(this, props));
     _this.state = {
-      questions: []
+      questions: [],
+      answer: '',
+      answers: []
     };
     return _this;
   }
@@ -75729,6 +75731,15 @@ function (_Component) {
 
         console.log('data question1: ', res.data[0]);
         console.log('data question: ', res.data[0].question);
+      }).then(function (errors) {
+        console.log(errors);
+      });
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/try').then(function (res) {
+        console.log('from answer', res.data[0]);
+
+        _this2.setState({
+          answer: res.data[0]
+        });
       }).then(function (errors) {
         console.log(errors);
       });
@@ -75751,7 +75762,9 @@ function (_Component) {
           className: "card-body"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
           className: "card-title"
-        }, question.question))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)));
+        }, question.question), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "card-text"
+        }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)));
       }));
     }
   }]);
@@ -78588,7 +78601,18 @@ function (_Component) {
         className: "d-block"
       }, "Author : ", this.state.item.author, " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "date-read"
-      }, "Date : ", this.state.item.created_at))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, this.state.item.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Date : ", this.state.item.created_at)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-md-4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "fitness-blog-sidebar"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "add-widget mb-100"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "#"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/img/bg-img/add3.png",
+        alt: ""
+      }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, this.state.item.body)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pt-5"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "section-title"
