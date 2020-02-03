@@ -58,7 +58,7 @@ export default class EidtRecipe extends Component {
             .then(error => {
                 console.log(error)
             })
-  
+            window.location.href='/recipeAdmin'
 
     }
 

@@ -181,7 +181,7 @@ export default class Blog extends Component {
 
                             {(this.state.weight) / ((this.state.tall / 100) ** 2) > 35 &&
                                 <div>
-                                    <h1>Body type: error</h1>
+                                    <h1>Body type: Over Weight</h1>
                                 </div>
 
 
@@ -206,7 +206,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 1 && this.state.exercise == 1 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -220,7 +220,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 1 && this.state.exercise == 2 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.375).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.375).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -233,7 +233,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 1 && this.state.exercise == 3 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.55).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.55).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -245,7 +245,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 1 && this.state.exercise == 4 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.725).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.725).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -257,7 +257,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 1 && this.state.exercise == 5 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.725).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) + 5) * 1.725).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -269,11 +269,6 @@ export default class Blog extends Component {
 
 
 
-
-
-
-
-
                         {/* women */}
 
 
@@ -281,7 +276,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 2 && this.state.exercise == 1 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -295,7 +290,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 2 && this.state.exercise == 2 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.375).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.375).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -308,7 +303,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 2 && this.state.exercise == 3 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.55).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.55).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -320,7 +315,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 2 && this.state.exercise == 4 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.725).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.725).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -332,7 +327,7 @@ export default class Blog extends Component {
 
                             {this.state.weight > 0 && this.state.tall > 0 && this.state.gender == 1 && this.state.exercise == 5 && this.state.age > 0 &&
                                 <div>
-                                    <h1>weight:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.725).toFixed(2)} calories/day</h1>
+                                    <h1>Calories:{(((this.state.weight * 10) + (6.25 * this.state.tall) - (5 * this.state.age) - 161) * 1.725).toFixed(2)} calories/day</h1>
                                 </div>
 
 
@@ -340,43 +335,6 @@ export default class Blog extends Component {
                             }
 
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                         <div>

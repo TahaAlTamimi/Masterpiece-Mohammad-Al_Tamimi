@@ -71,16 +71,16 @@ export default class RecipeForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="title">Title</label>
-                        <input className="form-control" name='title' onChange={this.handleChange} value={this.state.title} id="title" rows="3" required />
+                        <input className="form-control" name='title' autocomplete="off" onChange={this.handleChange} value={this.state.title} id="title" rows="3" required />
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="prefer">Prefer</label>
-                        <input className="form-control" name='prefer' onChange={this.handleChange} value={this.state.prefer} id="prefer" rows="3" required />
+                        <input className="form-control" name='prefer' autocomplete="off" onChange={this.handleChange} value={this.state.prefer} id="prefer" rows="3" required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="author">Author</label>
-                        <input className="form-control" name='author' onChange={this.handleChange} value={this.state.author} id="author" rows="3" required />
+                        <input className="form-control" name='author' autocomplete="off" onChange={this.handleChange} value={this.state.author} id="author" rows="3" required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="image">Image</label>

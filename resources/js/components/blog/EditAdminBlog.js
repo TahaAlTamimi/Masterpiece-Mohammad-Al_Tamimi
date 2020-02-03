@@ -59,6 +59,12 @@ export default class EidtAdminForm extends Component {
             .then(error => {
                 console.log(error)
             })
+
+           
+                
+                window.location.href='/blogAdmin'
+            
+           
   
 
     }

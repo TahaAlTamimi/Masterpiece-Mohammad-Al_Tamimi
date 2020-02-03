@@ -93,7 +93,7 @@ export default class QuestionForm extends Component {
 
 
     render() {
-
+console.log('role',this.state.roles.isAdmin )
         return (
             <>
                 <div className="container">
@@ -154,7 +154,7 @@ export default class QuestionForm extends Component {
 
                                     </div>
                                     {this.state.roles.id == q.user.id ? <button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button> : ''}
-                                    {this.state.roles.id == 1 ? <button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button> : ''}
+                                    {this.state.roles.isAdmin == 1 ? <button className="btn btn-danger" onClick={() => this.delete(q.id)}>Delete </button> : ''}
 
 
 

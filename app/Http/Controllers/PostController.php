@@ -139,18 +139,15 @@ class PostController extends Controller
 
 	public function commentsdestroy( $id) {
 		
-		
-
-		Comment::where('id' , '=' , $id)
-		->
+		Comment::  where('id' , '=' , $id) ->
 		where(function ($query) {
 			$query->where('user_id','=',Auth::user()->id)
 			->orWhere('role_id','=',Auth::user()->isAdmin); 
-		})
+		}) ->delete();
 		
 		
 		
-		->delete();
+		
 	
 	}
 
@@ -216,10 +213,12 @@ class PostController extends Controller
 
 	public function all() {
 
-		$ok=Comment::where('id' , '=' , 60
-		)->get();
-	
-	return $ok[0]->user->isAdmin;
+		$role =User::get();
+		$users = Comment::
+		when($role, function ($query, $role) {
+			return $query->where('role_id', $role);
+		});
+	return $role;
 	}
 
 }

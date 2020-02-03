@@ -84,12 +84,12 @@ $=jQuery;
                                     <li><a href="/youtube">Exercise</a></li>
                                     <li><a href="/recipe">Recipe</a>
                                     <li><a href="/calculate">Advice</a></li>
-                                    <li><a href="/about">About Us</a></li>
+                                    
 
                                     @auth
                                     <li><a href="/question">add your question</a></li>
                                     @endauth
-
+                                    <li><a href="/about">About Us</a></li>
                                     @if(!Auth::guest() && Auth::user()->hasAnyRole(['Expert']))
                                     <li> <a  href="{{ url('/AllQuestionExpert') }}"
                                      >

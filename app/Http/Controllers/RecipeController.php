@@ -154,12 +154,7 @@ class RecipeController extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        Recipe::
-        where('id' , '=' , $id) ->
-		where(function ($query) {
-			$query->where('user_id','=',Auth::user()->id)
-			->orWhere('role_id','=',Auth::user()->isAdmin); 
-		}) ->delete();
+        Recipe::where('id' , '=' , $id)  ->delete();;
     }
     public function comment(Request $request,$recipe_id) {
 		$this->validate($request, [
