@@ -7,7 +7,7 @@ $dbopts = parse_url(getenv('postgres://wcuxnvppaxarei:204af9ddf7e8dc28ae5e86a9e3
 $host = $dbopts["host"]??null;
 $username = $dbopts["user"]??null;
 $password = $dbopts["pass"]??null;
-$database = substr($dbopts["path"],1)??null;
+$database = ltrim($dbopts["path"],"/")??null;
 return [
 
     /*
@@ -88,14 +88,14 @@ return [
         'pgsql_production' => [
             'driver' => 'pgsql',
             'host' => $host,
-            // 'port' => $dbopts["port"],
+            'port' => $dbopts["port"],
             'database' => $database,
             'username' => $user,
             'password' => $password,
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
-            // 'sslmode' => 'require',
+            'sslmode' => 'require',
         ],
 
         'sqlsrv' => [
