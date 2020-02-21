@@ -68162,7 +68162,7 @@ exports.default = _PaginationBoxView2.default;
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
+/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75375,7 +75375,6 @@ function (_Component) {
       }).then(function (error) {
         console.log(error);
       });
-      window.location.href = '/blog';
     }
   }, {
     key: "render",
@@ -79514,8 +79513,8 @@ if (document.getElementById('root')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/owner/Desktop/masterpieace/Template/health/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/owner/Desktop/masterpieace/Template/health/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/tamimi/Desktop/folder/Masterpiece-Mohammad-Al_Tamimi/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/tamimi/Desktop/folder/Masterpiece-Mohammad-Al_Tamimi/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -65,7 +65,7 @@ export default class Form extends Component {
                 console.log(error)
             })
           
-                window.location.href='/blog'
+              
         
        
 
