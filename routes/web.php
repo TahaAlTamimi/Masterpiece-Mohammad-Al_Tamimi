@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/wel', function () {
+    return view('welcome');
+});
+
+
 Route::get('/user/{id}', 'ProfileController@index');
 
 Auth::routes();
