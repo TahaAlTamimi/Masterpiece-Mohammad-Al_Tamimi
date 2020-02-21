@@ -13,7 +13,7 @@
        <img src="{{($user->image_profile)}}"  style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px ">
          <h2> {{$user->name}}  </h2>
          <h2> {{$user->isAdmin}}  </h2>
-         
+         <h2> {{$user->roles}}  </h2>
          <form enctype='multipart/form-data' action='/profile'method='post'>
          
          <label> update photo</label>
