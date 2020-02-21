@@ -98,7 +98,7 @@ $=jQuery;
 
 
                  @endif
- @if(!Auth::guest() && Auth::user()->hasAnyRole(['admin']))
+ @if(!Auth::guest() && Auth::user()->hasAnyRole(['Admin']))
 
 <li><a href="#">Admin</a>
     <ul class="dropdown">
