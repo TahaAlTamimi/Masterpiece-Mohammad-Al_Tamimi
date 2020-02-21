@@ -3,11 +3,17 @@
 use Illuminate\Support\Str;
 
 
-$dbopts = parse_url(getenv('postgres://xxmcrfbpgetnuv:7168e719b9cf7b60a166b4746ae43120424579659962f60e4abb18a989dc6b12@ec2-184-72-236-3.compute-1.amazonaws.com:5432/d3j7ollkeln3il'));
-$host = $dbopts["host"]??null;
-$username = $dbopts["user"]??null;
-$password = $dbopts["pass"]??null;
-$database = ltrim($dbopts["path"],"/")??null;
+// $dbopts = parse_url(getenv(''));
+// $host = $dbopts["host"]??null;
+// $username = $dbopts["user"]??null;
+// $password = $dbopts["pass"]??null;
+// $database = ltrim($dbopts["path"],"/")??null;
+$url = parse_url(getenv("postgres://xxmcrfbpgetnuv:7168e719b9cf7b60a166b4746ae43120424579659962f60e4abb18a989dc6b12@ec2-184-72-236-3.compute-1.amazonaws.com:5432/d3j7ollkeln3il"));
+
+$host = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$database = substr($url["path"], 1);
 return [
 
     /*
@@ -88,14 +94,14 @@ return [
         'pgsql_production' => [
             'driver' => 'pgsql',
             'host' => $host,
-            'port' => $dbopts["port"],
+            // 'port' => $dbopts["port"],
             'database' => $database,
             'username' => $user,
             'password' => $password,
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
-            'sslmode' => 'require',
+            // 'sslmode' => 'require',
         ],
 
         'sqlsrv' => [
