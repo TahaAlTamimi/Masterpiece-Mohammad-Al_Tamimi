@@ -15,7 +15,7 @@
     <title>{{ config('app.name', 'H&S') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js',true) }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -390,15 +390,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
   <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="{{asset('js/jquery/jquery-2.2.4.min.js')}}"></script>
+    <script src="{{asset('js/jquery/jquery-2.2.4.min.js',true)}}"></script>
     <!-- Popper js -->
-    <script src="{{asset('js/bootstrap/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap/popper.min.js',true)}}"></script>
     <!-- Bootstrap js -->
     <!-- <script src="js/bootstrap/bootstrap.min.js"></script> -->
     <!-- All Plugins js -->
-    <script src="{{asset('js/plugins/plugins.js')}}"></script>
+    <script src="{{asset('js/plugins/plugins.js',true)}}"></script>
     <!-- Active js -->
-    <script src="{{asset('js/active.js')}}"></script>
+    <script src="{{asset('js/active.js',true)}}"></script>
     <!-- Live Chat Code :: Start of Tawk.to Script -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
     <script src="http://code.jquery.com/jquery.min.js"></script>
