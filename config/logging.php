@@ -5,6 +5,17 @@ use Monolog\Handler\SyslogUdpHandler;
 
 return [
 
+    'default' => env('LOG_CHANNEL', 'stack'),
+    'channels' => [
+        'stack' => [
+            'driver' => 'stack',
+            'channels' => ['single'],
+        ],
+        'single' => [
+            'driver' => 'errorlog',
+            'level' => 'debug',
+        ],
+
     /*
     |--------------------------------------------------------------------------
     | Default Log Channel
@@ -91,4 +102,6 @@ return [
         ],
     ],
 
-];
+
+]];
+
