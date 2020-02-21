@@ -3,7 +3,7 @@
 use Illuminate\Support\Str;
 
 
-$dbopts = parse_url(getenv('DATABASE_URL'));
+$dbopts = parse_url(getenv('postgres://wcuxnvppaxarei:204af9ddf7e8dc28ae5e86a9e35d84f8fe83188b6e7295d3142cd9b2fec54e5a@ec2-54-197-34-207.compute-1.amazonaws.com:5432/d1m1di5goj07du'));
 $host = $dbopts["host"]??null;
 $username = $dbopts["user"]??null;
 $password = $dbopts["pass"]??null;
