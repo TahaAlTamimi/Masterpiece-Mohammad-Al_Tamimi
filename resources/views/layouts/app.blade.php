@@ -36,7 +36,7 @@
   <!-- <link rel="icon" href="{{asset('img/core-imFg/favicon.ico')}}"> -->
 
 <!-- Core Stylesheet -->
-<link rel="stylesheet" href="{{asset('/style.css')}}">
+<link rel="stylesheet" href="{{asset('/style.css',true)}}">
 </head>
 
 <body>
