@@ -19,15 +19,15 @@
     <script src="{{ asset('js/app.js',true) }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com,true">
-    <link href="https://fonts.googleapis.com/css?family=Nunito,true" rel="stylesheet">
+    <!-- <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
     <!-- cdn -->
     <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css,true">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css,true" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css,true" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
 
 
 <!-- ourdesign -->
@@ -140,7 +140,7 @@ $=jQuery;
 
                         @else
                         <li><a href="#"> {{ Auth::user()->name }} <span class="caret"></span>
-                                        <img src= "{{asset(Auth::user()->image_profile)}}" style="height:35px;width:35px; border-radius:50%;margin-right:15px; " >
+                                        <img src= "{{asset(Auth::user()->image_profile),true}}" style="height:35px;width:35px; border-radius:50%;margin-right:15px; " >
      </a>
     <ul class="dropdown">
   
@@ -401,10 +401,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active js -->
     <script src="{{asset('js/active.js',true)}}"></script>
     <!-- Live Chat Code :: Start of Tawk.to Script -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js,true"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
     <script src="http://code.jquery.com/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js,true"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js,true"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
 
 
 
