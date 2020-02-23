@@ -44,7 +44,7 @@ class PostController extends Controller
        $post->title=$request->input('title');
        $post->prefer=$request->input('prefer');
 	   $post->author=$request->input('author');
-	   $post->image=$name;
+	//    $post->image=$name;
 	
 	   $post->body=$request->input('body');
 	
