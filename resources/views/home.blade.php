@@ -2,7 +2,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<?php header("Access-Control-Allow-Origin: *"); ?>
 
 <div id="preloader">
                     <i class="circle-preloader"></i>

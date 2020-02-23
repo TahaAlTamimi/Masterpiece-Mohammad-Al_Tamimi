@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php header("Access-Control-Allow-Origin: *"); ?>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 
