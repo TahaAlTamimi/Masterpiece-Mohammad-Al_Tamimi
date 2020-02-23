@@ -2,7 +2,7 @@
 
 @extends('layouts.app')
 @section('user')
-<?php header("Access-Control-Allow-Origin: *"); ?>
+
 <div class="container">
     
     
