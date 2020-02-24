@@ -48,7 +48,7 @@ Route::get('/blogAdmin', [
     'roles'=>['Admin'],
     
     ]);
-Route::get('/EditAdmin/{id}', 'HomeController@index')->middleware('Admin')->name('home');
+Route::get('/EditAdmin/{id}', 'HomeController@index')->middleware('admin')->name('home');
 Route::get('/getposts/{id}', 'HomeController@index')->name('home');
 Route::get('/{id}/edit', 'HomeController@index')->name('home');
 
