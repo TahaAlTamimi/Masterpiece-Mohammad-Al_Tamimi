@@ -81,10 +81,10 @@
 
 
                                     </li>
-                                    <li><a href="/blog">Article</a></li>
-                                    <li><a href="/youtube">Exercise</a></li>
-                                    <li><a href="/recipe">Recipe</a>
-                                    <li><a href="/calculate">Advice</a></li>
+                                    <li><a href="/blog">Article1</a></li>
+                                    <li><a href="/youtube">Exercise2</a></li>
+                                    <li><a href="/recipe">Recipe3</a>
+                                    <li><a href="/calculate">Advice4</a></li>
                                     
 
                                     @auth

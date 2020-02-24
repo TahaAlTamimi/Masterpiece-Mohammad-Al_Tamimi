@@ -32,7 +32,7 @@ export default class Blog extends Component {
         <div className="card-header " style={{ fontFamily: ' Amaranth', fontSize: "20px", color: "white", backgroundColor: "green" }}>
 
 
-          Why Health and development?
+          Why Health and development?22525252525yuo yup
   </div>
 
         <h1 className="blockquote-footer" style={{ fontFamily: ' Amaranth', fontSize: "20px", padding: "20px" }}>
