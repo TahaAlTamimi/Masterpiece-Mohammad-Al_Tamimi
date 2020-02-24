@@ -46,7 +46,7 @@
 
 <div id="app">
 <script>
-$=jQuery;
+
 </script>
  <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
  <header class="header-area">
