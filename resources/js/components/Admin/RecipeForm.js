@@ -95,7 +95,7 @@ export default class RecipeForm extends Component {
                         <textarea className="form-control" name='body' id="body" onChange={this.handleChange} value={this.state.body} rows="5" required></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">
-                        Puplish
+                        Puplish555
                   </button>
 
                 </form>
