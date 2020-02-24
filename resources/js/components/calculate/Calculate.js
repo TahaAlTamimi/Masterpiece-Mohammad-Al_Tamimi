@@ -64,7 +64,7 @@ export default class Blog extends Component {
                     <img src="https://epsi.eu/wp-content/uploads/2019/04/euhealth.png" width="100%" style={{ height: ' 400px' }} />
                 </div>
                 <div className="d-flex flex-column align-items-center" style={{ marginTop: '12px' }} >
-                    <h3>How Ideal Weight Is Calculated</h3>
+                    <h3>How Ideal Weight Is Calculated142536</h3>
                 </div>
                 <form onSubmit={this.onSubmit}>
 
