@@ -56,7 +56,7 @@ Route::get('/{id}/edit', 'HomeController@index')->name('home');
 
 
 
-Route::get('/recipeAdmin', 'HomeController@index')->middleware('Admin')->name('home');
+Route::get('/recipeAdmin', 'HomeController@index')->middleware('admin')->name('home');
 Route::get('/EditRecipe/{id}', 'HomeController@index')->middleware('admin')->name('home');
 // laravel route
 Route::post('/postadmin', 'PostController@store');
