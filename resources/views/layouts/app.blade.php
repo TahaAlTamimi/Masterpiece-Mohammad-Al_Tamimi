@@ -48,7 +48,7 @@
 <script>
 $=jQuery;
 </script>
- <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+ <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
  <header class="header-area">
         <!-- Navbar Area -->
         <div class="fitness-main-menu">
@@ -401,10 +401,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Active js -->
     <script src="{{asset('js/active.js',true)}}"></script>
     <!-- Live Chat Code :: Start of Tawk.to Script -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.js"></script>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.js"></script>
 
 
 
