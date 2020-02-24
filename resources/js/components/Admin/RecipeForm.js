@@ -66,7 +66,7 @@ export default class RecipeForm extends Component {
           
             <div className="container">
               
-                <h1>Add Recipe</h1>
+                <h1>Add Recipe5252525</h1>
                 <form onSubmit={this.onSubmit} encType='multipart/form-data'>
 
                     <div className="form-group">
@@ -76,11 +76,11 @@ export default class RecipeForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="prefer">Prefer</label>
-                        <input className="form-control" name='prefer' autocomplete="off" onChange={this.handleChange} value={this.state.prefer} id="prefer" rows="3" required />
+                        <input className="form-control" name='prefer' autoComplete="off" onChange={this.handleChange} value={this.state.prefer} id="prefer" rows="3" required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="author">Author</label>
-                        <input className="form-control" name='author' autocomplete="off" onChange={this.handleChange} value={this.state.author} id="author" rows="3" required />
+                        <input className="form-control" name='author' autoComplete="off" onChange={this.handleChange} value={this.state.author} id="author" rows="3" required />
                     </div>
                     <div className="form-group">
                         <label htmlFor="image">Image</label>
