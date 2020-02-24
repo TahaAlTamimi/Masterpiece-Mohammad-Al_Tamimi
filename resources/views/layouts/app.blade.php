@@ -81,7 +81,7 @@
 
 
                                     </li>
-                                    <li><a href="/blog">Article58585</a></li>
+                                    <li><a href="/blog">Article</a></li>
                                     <li><a href="/youtube">Exercise</a></li>
                                     <li><a href="/recipe">Recipe</a>
                                     <li><a href="/calculate">Advice</a></li>
