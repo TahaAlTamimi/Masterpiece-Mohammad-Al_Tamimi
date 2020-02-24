@@ -37,7 +37,7 @@ export default class RecipeForm extends Component {
             .then(error => {
                 console.log(error)
             })
-            window.location.href='/recipe'
+            // window.location.href='/recipe'
 
     }
     handlePhoto = e => {
@@ -71,7 +71,7 @@ export default class RecipeForm extends Component {
 
                     <div className="form-group">
                         <label htmlFor="title">Title</label>
-                        <input className="form-control" name='title' autocomplete="off" onChange={this.handleChange} value={this.state.title} id="title" rows="3" required />
+                        <input className="form-control" name='title' autoComplete="off" onChange={this.handleChange} value={this.state.title} id="title" rows="3" required />
                     </div>
 
                     <div className="form-group">
