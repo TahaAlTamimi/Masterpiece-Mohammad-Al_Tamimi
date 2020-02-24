@@ -48,7 +48,13 @@ Route::get('/blogAdmin', [
     'roles'=>['Admin'],
     
     ]);
-Route::get('/EditAdmin/{id}', 'HomeController@index')->middleware('admin')->name('home');
+Route::get('/EditAdmin/{id}', [
+    'uses'=>'HomeController@index',
+    'as'=>'home',
+    'middleware'=>'roles',
+    'roles'=>['Admin'],
+    
+    ]);
 Route::get('/getposts/{id}', 'HomeController@index')->name('home');
 Route::get('/{id}/edit', 'HomeController@index')->name('home');
 
@@ -56,8 +62,20 @@ Route::get('/{id}/edit', 'HomeController@index')->name('home');
 
 
 
-Route::get('/recipeAdmin', 'HomeController@index')->middleware('admin')->name('home');
-Route::get('/EditRecipe/{id}', 'HomeController@index')->middleware('admin')->name('home');
+Route::get('/recipeAdmin', [
+    'uses'=>'HomeController@index',
+    'as'=>'home',
+    'middleware'=>'roles',
+    'roles'=>['Admin'],
+    
+    ]);
+Route::get('/EditRecipe/{id}', [
+    'uses'=>'HomeController@index',
+    'as'=>'home',
+    'middleware'=>'roles',
+    'roles'=>['Admin'],
+    
+    ]);
 // laravel route
 Route::post('/postadmin', 'PostController@store');
 Route::get('/getposts', 'PostController@index');
@@ -75,7 +93,13 @@ Route::put('/editpost/{id}', 'PostController@update');
 
 
 // recipe react
-Route::get('/Adminrecipe', 'HomeController@index')->middleware('admin')->name('home');
+Route::get('/Adminrecipe', [
+    'uses'=>'HomeController@index',
+    'as'=>'home',
+    'middleware'=>'roles',
+    'roles'=>['Admin'],
+    
+    ]);
 Route::get('/recipe', 'HomeController@index')->name('home');
 Route::get('/recipe/{id}', 'HomeController@index')->name('home');
 Route::get('/getrecipecomments/{id}', 'HomeController@index')->name('home');
@@ -108,7 +132,13 @@ Route::delete('/deleteuser/{id}', 'QuestionController@destroy2');
 
 
 // answer react
-Route::get('/AllQuestionExpert', 'HomeController@index')->middleware('admin')->name('home');
+Route::get('/AllQuestionExpert', [
+    'uses'=>'HomeController@index',
+    'as'=>'home',
+    'middleware'=>'roles',
+    'roles'=>['Admin'],
+    
+    ]);
 Route::get('/question/{id}', 'HomeController@index')->name('home');
 Route::get('/answer/{id}', 'HomeController@index')->name('home');
 // answer laravel 
